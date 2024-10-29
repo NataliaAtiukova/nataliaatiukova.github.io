@@ -8,15 +8,18 @@
 .portfolio-box {
     position: relative;
     overflow: hidden;
-    width: 48%; /* Каждая картинка займёт примерно половину ширины */
+    width: 48%; /* Половина ширины для двух изображений в строке */
+    max-height: 100vh; /* Максимальная высота изображения относительно экрана */
     border-radius: 8px;
-    aspect-ratio: 9 / 16; /* Соотношение сторон, чтобы сохранить высоту для вертикальных изображений */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfolio-img {
     width: 100%;
-    height: 100%;
-    object-fit: contain; /* Подгоняем изображение внутри контейнера, сохраняя пропорции */
+    height: auto; /* Поддерживает пропорции без обрезки */
+    object-fit: contain; /* Позволяет изображению вписываться полностью */
     border-radius: 8px;
 }
 

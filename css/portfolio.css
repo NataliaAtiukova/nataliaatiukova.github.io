@@ -2,24 +2,24 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-    height: 300px; /* Задаем фиксированную высоту контейнера */
 }
 
 .portfolio-img {
     width: 100%; /* Заполняет всю ширину контейнера */
-    height: 100%; /* Занимает всю высоту контейнера */
-    object-fit: cover; /* Обрезает изображение по размеру контейнера, сохраняя пропорции */
-    border-radius: 8px; /* Добавляет скругленные углы */
+    height: 250px; /* Фиксированная высота для консистентного отображения */
+    object-fit: cover; /* Заполняет контейнер, сохраняя пропорции и обрезая лишнее */
+    border-radius: 8px;
 }
 
 .project-section {
     margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: flex-start; /* Выравнивание по началу для аккуратности */
 }
 
 .project-description {
     padding: 20px;
     text-align: left;
+    flex-basis: 100%; /* Занимает всю ширину, чтобы не мешать изображениям */
 }

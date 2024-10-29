@@ -9,15 +9,14 @@
     position: relative;
     overflow: hidden;
     width: 48%; /* Каждая картинка займёт примерно половину ширины */
-    height: 1080px; /* Увеличенная высота для более полного отображения */
     border-radius: 8px;
-    margin-bottom: 10px;
+    aspect-ratio: 9 / 16; /* Соотношение сторон, чтобы сохранить высоту для вертикальных изображений */
 }
 
 .portfolio-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Заполняет контейнер, сохраняя пропорции */
+    object-fit: contain; /* Подгоняем изображение внутри контейнера, сохраняя пропорции */
     border-radius: 8px;
 }
 

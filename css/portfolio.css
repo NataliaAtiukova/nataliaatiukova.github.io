@@ -1,25 +1,25 @@
+.portfolio-box {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 300px; /* Задаем фиксированную высоту контейнера */
+}
+
 .portfolio-img {
     width: 100%; /* Заполняет всю ширину контейнера */
-    max-height: 100%; /* Ограничивает максимальную высоту изображения */
+    height: 100%; /* Занимает всю высоту контейнера */
     object-fit: cover; /* Обрезает изображение по размеру контейнера, сохраняя пропорции */
-    border-radius: 8px; /* Добавляет легкие скругленные углы для аккуратности */
+    border-radius: 8px; /* Добавляет скругленные углы */
 }
 
 .project-section {
     margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch; /* Растягивает содержимое для равномерного распределения */
+    align-items: stretch;
 }
 
 .project-description {
     padding: 20px;
     text-align: left;
-}
-
-.portfolio-box {
-    margin-bottom: 20px;
-    position: relative; /* Позволяет капциям позиционироваться поверх */
-    overflow: hidden; /* Обрезает изображение, если оно выходит за пределы контейнера */
-    height: 100%; /* Занимает всю доступную высоту */
 }

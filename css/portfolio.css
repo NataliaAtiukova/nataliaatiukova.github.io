@@ -1,25 +1,25 @@
+.project-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две равные колонки */
+    gap: 20px; /* Отступы между элементами */
+    margin-bottom: 50px;
+}
+
 .portfolio-box {
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px;
+    border-radius: 8px;
+    height: 100%; /* Динамическая высота в зависимости от содержимого */
 }
 
 .portfolio-img {
-    width: 100%; /* Заполняет всю ширину контейнера */
-    height: 250px; /* Фиксированная высота для консистентного отображения */
-    object-fit: cover; /* Заполняет контейнер, сохраняя пропорции и обрезая лишнее */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 8px;
-}
-
-.project-section {
-    margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start; /* Выравнивание по началу для аккуратности */
 }
 
 .project-description {
     padding: 20px;
     text-align: left;
-    flex-basis: 100%; /* Занимает всю ширину, чтобы не мешать изображениям */
 }

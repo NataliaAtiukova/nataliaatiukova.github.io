@@ -9,7 +9,7 @@
     position: relative;
     overflow: hidden;
     width: 48%; /* Каждая картинка займёт примерно половину ширины */
-    height: 200px; /* Фиксированная высота для ровного отображения */
+    height: 1080px; /* Увеличенная высота для более полного отображения */
     border-radius: 8px;
     margin-bottom: 10px;
 }

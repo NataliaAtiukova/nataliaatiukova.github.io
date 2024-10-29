@@ -16,8 +16,12 @@
     text-align: left;
 }
 
+.portfolio-box {
+    margin-bottom: 20px;
+}
+
 .portfolio-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    height: 250px; /* Задаем высоту для равномерного отображения */
+    width: 100%; 
+    object-fit: cover; /* Картинка заполняет блок, сохраняя пропорции */
 }

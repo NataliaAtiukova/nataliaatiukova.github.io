@@ -11,3 +11,18 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
+
+<!-- Initialize WOW.js for animations -->
+<script>
+    new WOW({
+        boxClass:     'wow',      // animated element css class
+        animateClass: 'animated', // animation css class
+        offset:       100,        // distance to the element when triggering the animation
+        mobile:       true,       // trigger animations on mobile devices
+        live:         true,       // act on asynchronously loaded content
+        callback:     function(box) {
+            // the callback is fired every time an animation is started
+        },
+        scrollContainer: null     // optional scroll container selector
+    }).init();
+</script>

@@ -25,27 +25,38 @@
 
 /* Специальный стиль для скриншотов мобильных приложений */
 .mobile-screenshot {
-    max-width: 80%;
-    max-height: 500px;
+    height: 100%;
+    width: auto;
+    max-height: 400px;
     object-fit: contain;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    display: block;
 }
 
 /* Контейнер для мобильных скриншотов */
 .mobile-portfolio-box {
     position: relative;
     overflow: hidden;
-    width: 48%;
-    height: 500px;
+    width: 23%; /* Примерно 4 скриншота в ряд */
+    height: 400px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #f8f9fa;
-    padding: 15px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+/* Контейнер для ряда мобильных скриншотов */
+.mobile-screenshots-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 0;
 }
 
 .project-description {

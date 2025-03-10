@@ -23,6 +23,31 @@
     border-radius: 8px;
 }
 
+/* Специальный стиль для скриншотов мобильных приложений */
+.mobile-screenshot {
+    max-width: 80%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: block;
+}
+
+/* Контейнер для мобильных скриншотов */
+.mobile-portfolio-box {
+    position: relative;
+    overflow: hidden;
+    width: 48%;
+    height: 500px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
 .project-description {
     width: 100%; /* Описание займёт всю ширину под изображениями */
     padding: 20px;

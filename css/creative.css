@@ -1,0 +1,56 @@
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 10px;
+}
+.lang-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-link.active, .lang-link:hover {
+  background: #f05f40;
+  color: #fff !important;
+}
+.lang-divider {
+  color: #aaa;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Стили для секции политики */
+.privacy-section {
+  max-width: 900px;
+  margin: 60px auto 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  padding: 40px 30px;
+  font-size: 1.08em;
+}
+.privacy-section h1, .privacy-section h2, .privacy-section h3 {
+  color: #f05f40;
+  margin-top: 30px;
+  margin-bottom: 18px;
+}
+.privacy-section ul {
+  margin-bottom: 20px;
+}
+.privacy-section li {
+  margin-bottom: 8px;
+}
+.privacy-section .update-info {
+  background: #f8f9fa;
+  border-left: 4px solid #f05f40;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+.privacy-section .contact-section {
+  text-align: center;
+  margin: 40px 0;
+} 

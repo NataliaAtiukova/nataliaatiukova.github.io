@@ -97,6 +97,10 @@ function setLanguage(lang) {
   if (document.getElementById('footer-policy')) {
     document.getElementById('footer-policy').textContent = (lang === 'ru') ? 'Политика конфиденциальности' : 'Privacy Policy';
   }
+  // Footer language label
+  if (document.getElementById('footer-lang-label')) {
+    document.getElementById('footer-lang-label').textContent = (lang === 'ru') ? 'Язык страницы: Русский' : 'Page language: English';
+  }
   // ... другие секции ...
 }
 

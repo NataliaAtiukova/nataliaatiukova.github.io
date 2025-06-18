@@ -53,4 +53,11 @@
 .privacy-section .contact-section {
   text-align: center;
   margin: 40px 0;
+}
+
+.footer-lang-label {
+  color: #888;
+  font-size: 1em;
+  margin-top: 8px;
+  letter-spacing: 0.02em;
 } 

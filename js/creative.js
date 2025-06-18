@@ -46,3 +46,62 @@
     new WOW().init();
 
 })(jQuery); // End of use strict
+
+const translations = {
+  ru: {
+    nav: {
+      about: 'Обо мне',
+      portfolio: 'Портфолио',
+      contact: 'Контакты',
+      policy: 'Политика',
+    },
+    header: {
+      title: 'Добро пожаловать в портфолио мобильного разработчика',
+      desc: 'Я Наталья Атьюкова, мобильный разработчик, создающий современные и удобные приложения для iOS и Android. Использую современные инструменты — Swift, SwiftUI, Kotlin, Firebase — чтобы разрабатывать мощные кроссплатформенные решения. Ознакомьтесь с моими проектами ниже или посетите мой GitHub!',
+      btn: 'Подробнее',
+    },
+    // ... другие секции ...
+  },
+  en: {
+    nav: {
+      about: 'About Me',
+      portfolio: 'Portfolio',
+      contact: 'Contact',
+      policy: 'Privacy Policy',
+    },
+    header: {
+      title: 'Welcome to My Mobile Developer Portfolio',
+      desc: "I'm Natalya Atyukova, a mobile developer focused on creating seamless and engaging applications for both iOS and Android platforms. Using modern tools including Swift, SwiftUI, Kotlin, and Firebase, I develop powerful cross-platform solutions. Explore my projects below or visit my GitHub repository to see my work!",
+      btn: 'Learn More',
+    },
+    // ... другие секции ...
+  }
+};
+
+function setLanguage(lang) {
+  // Навигация
+  document.getElementById('nav-about').textContent = translations[lang].nav.about;
+  document.getElementById('nav-portfolio').textContent = translations[lang].nav.portfolio;
+  document.getElementById('nav-contact').textContent = translations[lang].nav.contact;
+  document.getElementById('nav-policy').textContent = translations[lang].nav.policy;
+  // Тумблер
+  document.getElementById('lang-ru').classList.toggle('active', lang === 'ru');
+  document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+  // Header
+  if (document.getElementById('header-title')) {
+    document.getElementById('header-title').textContent = translations[lang].header.title;
+    document.getElementById('header-desc').textContent = translations[lang].header.desc;
+    document.getElementById('header-btn').textContent = translations[lang].header.btn;
+  }
+  // Footer policy
+  if (document.getElementById('footer-policy')) {
+    document.getElementById('footer-policy').textContent = (lang === 'ru') ? 'Политика конфиденциальности' : 'Privacy Policy';
+  }
+  // ... другие секции ...
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  // RU/EN переключатель
+  document.getElementById('lang-ru').onclick = function() { setLanguage('ru'); };
+  document.getElementById('lang-en').onclick = function() { setLanguage('en'); };
+});

@@ -118,13 +118,15 @@
         <!-- About -->
         <section id="about" class="py-16 sm:py-24">
           <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div id="about-ru">
+            <div class="lang-ru">
               <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Обо мне</h2>
-              <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">Я Наталья Атюкова, увлечённый мобильный разработчик, создающий инновационные решения для iOS и Android. Владею современными технологиями: Swift, SwiftUI, Kotlin, Firebase. Разрабатываю мощные и удобные приложения, которые делают жизнь пользователей проще.</p>
+              <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">Привет! Я Наталья Атюкова — мобильный разработчик, который одинаково уверенно пишет под iOS и Android. Люблю чистую архитектуру и быстрый UI: Swift/SwiftUI и Kotlin — как левое и правое полушария. Иногда подключаю Flutter/Dart, когда проект шепчет «кроссплатформа».</p>
+              <p class="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">Работаю с Firebase (Auth, Firestore, FCM, Analytics, Crashlytics), REST API (Dio/http/Retrofit), хранением данных (Hive, SQLite), автоматизацией (GitHub Actions, Fastlane) и Postman. Дизайн люблю разный: от Material 3 до аккуратного Cupertino‑стайла. В моих «Call of Fire Stories» — записи о продакшн‑битвах, где каждый баг превращается в квест с хорошим исходом.</p>
             </div>
-            <div id="about-en" class="hidden">
+            <div class="lang-en hidden">
               <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">About</h2>
-              <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">I’m Natalia Atiukova, a mobile developer focused on building impactful iOS and Android apps with Swift, SwiftUI, Kotlin and Firebase. I care about accessibility, performance and clean, maintainable UI.</p>
+              <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">Hi! I’m Natalia Atiukova — a mobile developer fluent in both iOS and Android. I care about clean architecture and snappy UIs: Swift/SwiftUI and Kotlin are my left and right hemispheres. I bring in Flutter/Dart when a project whispers “cross‑platform”.</p>
+              <p class="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">I work with Firebase (Auth, Firestore, FCM, Analytics, Crashlytics), REST APIs (Dio/http/Retrofit), data storage (Hive, SQLite), automation (GitHub Actions, Fastlane) and Postman. Design‑wise, I’m comfortable from Material 3 to neat Cupertino vibes. In my “Call of Fire Stories”, every production bug turns into a quest with a happy ending.</p>
             </div>
           </div>
         </section>
@@ -134,6 +136,10 @@
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="ru-only text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white text-center">Навыки и экспертиза</h2>
             <h2 class="en-only hidden text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white text-center">Skills & Expertise</h2>
+            <div class="mt-4 text-center">
+              <p class="lang-ru text-gray-700 dark:text-gray-300">От архитектуры до релиза: проектирую, пишу, тестирую, автоматизирую — и всё это с лёгкой улыбкой и вниманием к деталям.</p>
+              <p class="lang-en hidden text-gray-700 dark:text-gray-300">From architecture to release: I design, build, test and automate — with a light smile and attention to detail.</p>
+            </div>
             <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <article class="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6">
                 <div class="text-primary">
@@ -171,6 +177,70 @@
                 <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 ru-only">Firebase, REST API и базы данных для полноценных мобильных приложений.</p>
                 <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 en-only hidden">Firebase, REST APIs and databases to power complete mobile applications.</p>
               </article>
+            </div>
+            <!-- Tech stack chips -->
+            <div class="mt-12 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Tech Stack</h3>
+              <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-ru">Языки и фреймворки</div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-en hidden">Languages & Frameworks</div>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Swift</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">SwiftUI</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Kotlin</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Flutter</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Dart</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-ru">Хранение данных</div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-en hidden">Data Storage</div>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Firebase Auth</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Firestore</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">FCM</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Analytics</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Crashlytics</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Hive</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">SQLite</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-ru">API и инфраструктура</div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-en hidden">API & Infrastructure</div>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">REST API</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Dio</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">http</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Retrofit</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Postman</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Git</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">GitHub Actions</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Fastlane</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-ru">Архитектура и состояние</div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-en hidden">Architecture & State</div>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">MVVM</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Clean Architecture</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Riverpod</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Bloc</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-ru">UI/UX</div>
+                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 lang-en hidden">UI/UX</div>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Material 3</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Cupertino</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Animations</span>
+                    <span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-800 dark:text-gray-200">Responsive Layout</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -390,6 +460,9 @@
         // Toggle generic RU/EN blocks
         document.querySelectorAll('.ru-only').forEach(el=>el.classList.toggle('hidden',isEn));
         document.querySelectorAll('.en-only').forEach(el=>el.classList.toggle('hidden',!isEn));
+        // Toggle new language blocks
+        document.querySelectorAll('.lang-ru').forEach(el=>el.classList.toggle('hidden',isEn));
+        document.querySelectorAll('.lang-en').forEach(el=>el.classList.toggle('hidden',!isEn));
         // Nav labels
         const navMap = isEn ? {
           about: 'About', skills: 'Skills', projects: 'Projects', contact: 'Contact', policy: 'Policy'

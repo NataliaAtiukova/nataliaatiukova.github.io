@@ -145,6 +145,14 @@
         btns.forEach(b=>{const active=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(active)); b.classList.toggle('text-gray-800',active); b.classList.toggle('text-gray-500',!active)});
         document.documentElement.setAttribute('lang',l);
         try{localStorage.setItem('lang',l)}catch(_){ }
+        // Footer labels
+        const links=document.querySelectorAll('footer nav a');
+        if(links && links.length){
+          links.forEach(a=>{
+            if(a.getAttribute('href')==='index.html') a.textContent = (l==='en') ? 'Home' : 'Главная';
+            if(a.getAttribute('href')==='oferta.html') a.textContent = (l==='en') ? 'Public Offer' : 'Публичная оферта';
+          });
+        }
       }
       btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
       // initial

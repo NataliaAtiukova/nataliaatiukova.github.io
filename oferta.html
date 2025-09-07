@@ -134,6 +134,9 @@
           if(l==='en'){reqRu.classList.add('hidden'); reqEn.classList.remove('hidden');}
           else{reqEn.classList.add('hidden'); reqRu.classList.remove('hidden');}
         }
+        // Footer label
+        const pol=document.querySelector('footer a[href="privacy-policy.html"]');
+        if(pol) pol.textContent = (l==='en') ? 'Privacy Policy' : 'Политика конфиденциальности';
       }
       btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
       (function(){try{const saved=localStorage.getItem('lang'); if(saved) setLang(saved);}catch(_){}})();

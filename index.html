@@ -96,7 +96,7 @@
                 <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Я Наталья Атюкова, мобильный разработчик, создающий современные и удобные приложения для iOS и Android. Использую современные инструменты — Swift, SwiftUI, Kotlin, Firebase — чтобы разрабатывать мощные кроссплатформенные решения. Ознакомьтесь с моими проектами ниже или посетите мой GitHub!</p>
                 <div class="mt-8 flex flex-wrap gap-3">
                   <a href="#projects" class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2.5 text-white font-medium hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">Смотреть проекты</a>
-                  <a href="https://github.com/NatalyaAtyukova" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Мой GitHub</a>
+                  <a href="https://github.com/NatalyaAtyukova/nataliaatiukova.github.io" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Мой GitHub</a>
                 </div>
               </div>
               <div id="hero-en" class="hidden">
@@ -104,7 +104,7 @@
                 <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">I’m Natalia Atiukova, a mobile developer building modern, user‑friendly iOS and Android apps using Swift, SwiftUI, Kotlin and Firebase. Explore selected work below or visit my GitHub.</p>
                 <div class="mt-8 flex flex-wrap gap-3">
                   <a href="#projects" class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2.5 text-white font-medium hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">View Projects</a>
-                  <a href="https://github.com/NatalyaAtyukova" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">GitHub</a>
+                  <a href="https://github.com/NatalyaAtyukova/nataliaatiukova.github.io" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">GitHub</a>
                 </div>
               </div>
             </div>
@@ -276,8 +276,8 @@
               <a href="mailto:whitepanda205@icloud.com" class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 text-center hover:shadow">
                 <div class="text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">whitepanda205@icloud.com</div>
               </a>
-              <a href="https://github.com/NatalyaAtyukova" target="_blank" rel="noopener" class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 text-center hover:shadow">
-                <div class="text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">GitHub: github.com/NatalyaAtyukova</div>
+              <a href="https://github.com/NatalyaAtyukova/nataliaatiukova.github.io" target="_blank" rel="noopener" class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 text-center hover:shadow">
+                <div class="text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">GitHub: github.com/NatalyaAtyukova/nataliaatiukova.github.io</div>
               </a>
               <a href="privacy-policy.html" class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 text-center hover:shadow">
                 <div class="font-semibold text-gray-800 dark:text-gray-200">Политика конфиденциальности</div>
@@ -292,7 +292,7 @@
           <p class="text-sm text-gray-600 dark:text-gray-400">© <span id="year"></span> Natalia Atiukova</p>
           <div class="flex items-center gap-4 text-sm">
             <a href="mailto:whitepanda205@icloud.com" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Email</a>
-            <a href="https://github.com/NatalyaAtyukova" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">GitHub</a>
+            <a href="https://github.com/NatalyaAtyukova/nataliaatiukova.github.io" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">GitHub</a>
             <a href="privacy-policy.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Политика</a>
           </div>
         </div>
@@ -319,6 +319,26 @@
         document.getElementById('ios-title-en')?.classList.toggle('hidden',!isEn);
         document.getElementById('android-title-ru')?.classList.toggle('hidden',isEn);
         document.getElementById('android-title-en')?.classList.toggle('hidden',!isEn);
+        // Nav labels
+        const navMap = isEn ? {
+          about: 'About', skills: 'Skills', projects: 'Projects', contact: 'Contact', policy: 'Policy'
+        } : { about: 'Обо мне', skills: 'Навыки', projects: 'Проекты', contact: 'Контакты', policy: 'Политика' };
+        const desktopLinks = document.querySelectorAll('header nav a');
+        desktopLinks?.forEach(a=>{
+          if(a.getAttribute('href')==="#about") a.textContent = navMap.about;
+          if(a.getAttribute('href')==="#skills") a.textContent = navMap.skills;
+          if(a.getAttribute('href')==="#projects") a.textContent = navMap.projects;
+          if(a.getAttribute('href')==="#contact") a.textContent = navMap.contact;
+          if(a.getAttribute('href')==="privacy-policy.html") a.textContent = isEn ? 'Policy' : 'Политика';
+        });
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks?.forEach(a=>{
+          if(a.getAttribute('href')==="#about") a.textContent = navMap.about;
+          if(a.getAttribute('href')==="#skills") a.textContent = navMap.skills;
+          if(a.getAttribute('href')==="#projects") a.textContent = navMap.projects;
+          if(a.getAttribute('href')==="#contact") a.textContent = navMap.contact;
+          if(a.getAttribute('href')==="privacy-policy.html") a.textContent = isEn ? 'Policy' : 'Политика';
+        });
         langBtns.forEach(b=>{const active=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(active)); b.classList.toggle('text-gray-800',active); b.classList.toggle('text-gray-500',!active)});
         document.documentElement.setAttribute('lang', l==='en'?'en':'ru');
         try{localStorage.setItem('lang', l)}catch(_){ }

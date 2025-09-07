@@ -38,7 +38,8 @@
           <div class="flex h-16 items-center justify-between">
             <a href="#top" class="inline-flex items-center gap-2 font-semibold text-gray-900 dark:text-white" aria-label="На главную">
               <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-primary text-white">NA</span>
-              <span>Natalia Atiukova</span>
+              <span class="ru-only hidden">Наталья Атюкова</span>
+              <span class="en-only">Natalia Atiukova</span>
             </a>
 
             <!-- Desktop menu -->
@@ -330,11 +331,21 @@
 
       <footer class="border-t border-gray-200/60 dark:border-gray-800 py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p class="text-sm text-gray-600 dark:text-gray-400">© <span id="year"></span> Natalia Atiukova</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            © <span id="year"></span>
+            <span class="ru-only hidden">Наталья Атюкова</span>
+            <span class="en-only">Natalia Atiukova</span>
+          </p>
           <div class="flex items-center gap-4 text-sm">
-            <a href="mailto:whitepanda205@icloud.com" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Email</a>
+            <a href="mailto:whitepanda205@icloud.com" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <span class="ru-only hidden">Почта</span>
+              <span class="en-only">Email</span>
+            </a>
             <a href="https://github.com/nataliaatiukova" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">GitHub</a>
-            <a href="privacy-policy.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Политика</a>
+            <a href="privacy-policy.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <span class="ru-only hidden">Политика</span>
+              <span class="en-only">Policy</span>
+            </a>
           </div>
         </div>
       </footer>

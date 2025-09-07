@@ -4,11 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Публичная оферта — Natalya Atyukova</title>
-    <meta name="description" content="Шаблон публичной оферты для публикации условий продажи и оплаты." />
+    <meta name="description" content="Публичная оферта (RU/EN) для услуг мобильной разработки: условия, оплата, возвраты, данные." />
     <meta name="color-scheme" content="light" />
     <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="16" fill="%231f2937"/><text x="50" y="58" font-size="52" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif">NA</text></svg>' />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>html{scroll-behavior:smooth}</style>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <style>
+      html{scroll-behavior:smooth}
+      .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    </style>
     <script>(function(){try{const t=localStorage.getItem('lang'); if(t){document.documentElement.setAttribute('lang',t)}}catch(_){}})();</script>
   </head>
   <body class="bg-white text-gray-800 antialiased">
@@ -16,93 +19,63 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href="index.html" class="font-semibold text-gray-900">Natalya Atyukova</a>
         <div class="flex items-center gap-2" role="group" aria-label="Language switcher">
-          <button data-lang="ru" class="lang-btn px-3 py-1.5 rounded-md text-sm border border-gray-300 text-gray-800 hover:bg-gray-50" aria-pressed="true">RU</button>
-          <button data-lang="en" class="lang-btn px-3 py-1.5 rounded-md text-sm border border-gray-300 text-gray-500 hover:bg-gray-50" aria-pressed="false">EN</button>
+          <button data-lang="ru" class="lang-btn px-3 py-1.5 rounded-md text-sm border border-gray-300 text-gray-800 hover:bg-gray-50" aria-pressed="true" title="Русский">🇷🇺 RU</button>
+          <button data-lang="en" class="lang-btn px-3 py-1.5 rounded-md text-sm border border-gray-300 text-gray-500 hover:bg-gray-50" aria-pressed="false" title="English">🇬🇧 EN</button>
         </div>
       </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <!-- RU -->
-      <article id="oferta-ru" class="space-y-6">
-        <h1 class="text-3xl font-bold">Публичная оферта</h1>
-        <p class="text-sm text-gray-600">Шаблон. Замените текст ниже содержимым из документа оферты.</p>
+      <article id="oferta-ru" class="prose prose-neutral max-w-none prose-a:text-blue-600">
+        <h1>Публичная оферта</h1>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">1. Общие положения</h2>
-          <p>[Здесь разместите предмет оферты, стороны договора, термины и определения.]</p>
-        </section>
+        <h2>1. Общие положения</h2>
+        <p>Настоящая публичная оферта является официальным предложением Натальи Атьюковой (ИНН 643404462600), самозанятого, заключить договор на оказание услуг мобильной разработки. Акцепт оферты считается заключением договора.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">2. Предмет договора</h2>
-          <p>[Описание товаров/услуг, порядок оказания/поставки, доступ к цифровому контенту и т.д.]</p>
-        </section>
+        <h2>2. Предмет договора</h2>
+        <p>Услуги: разработка мобильных приложений, UX/UI‑дизайн, интеграции, техническая поддержка. Все услуги предоставляются дистанционно.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">3. Цена и порядок оплаты</h2>
-          <p>[Укажите стоимость, валюту, налоги (при наличии). Оплата через защищённый платёжный шлюз (например, Robokassa). Платёжные данные вводятся на стороне шлюза, продавец не хранит данные карты.]</p>
-        </section>
+        <h2>3. Цена и порядок оплаты</h2>
+        <p>Стоимость определяется индивидуально. Оплата через защищённый шлюз (например, Robokassa). Продавец не хранит данные карты.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">4. Доставка и доступ</h2>
-          <p>[Сроки/способ предоставления услуг или доступа к цифровому продукту.]</p>
-        </section>
+        <h2>4. Доставка и доступ</h2>
+        <p>Сроки обсуждаются заранее. Доступ к результату — по email, в облако или репозиторий.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">5. Возвраты</h2>
-          <p>[Условия возврата и порядок обращения. Контакты: <a href="mailto:whitepanda205@icloud.com" class="text-blue-600 hover:underline">whitepanda205@icloud.com</a>.]</p>
-        </section>
+        <h2>5. Возвраты</h2>
+        <p>Отказ возможен до начала работ. После начала — частичный возврат. Запросы направлять на: <a href="mailto:whitepanda205@icloud.com">whitepanda205@icloud.com</a>.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">6. Персональные данные</h2>
-          <p>[Ссылка на <a href="privacy-policy.html" class="text-blue-600 hover:underline">Политику конфиденциальности</a>. Согласие на обработку при оформлении заказа.]</p>
-        </section>
+        <h2>6. Персональные данные</h2>
+        <p>Оформляя заказ, пользователь даёт согласие на обработку данных. Подробнее — в <a href="/privacy-policy.html">Политике конфиденциальности</a>.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">7. Реквизиты и контакты</h2>
-          <p>Ответственное лицо: <strong>Наталья Атыкова</strong><br>Email: <a href="mailto:whitepanda205@icloud.com" class="text-blue-600 hover:underline">whitepanda205@icloud.com</a></p>
-        </section>
+        <h2>7. Реквизиты и контакты</h2>
+        <p>Ответственное лицо: <strong>Наталья Атьюкова</strong><br/>Email: <a href="mailto:whitepanda205@icloud.com">whitepanda205@icloud.com</a></p>
       </article>
 
       <!-- EN -->
-      <article id="oferta-en" class="space-y-6 hidden">
-        <h1 class="text-3xl font-bold">Public Offer (Template)</h1>
-        <p class="text-sm text-gray-600">Template. Replace the sections below with your final offer text.</p>
+      <article id="oferta-en" class="prose prose-neutral max-w-none prose-a:text-blue-600 hidden">
+        <h1>Public Offer</h1>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">1. General Provisions</h2>
-          <p>[Define the subject of the offer, parties, terms and definitions.]</p>
-        </section>
+        <h2>1. General Terms</h2>
+        <p>This Public Offer is an official proposal by Nataliya Atyukova (TIN 643404462600), a self‑employed mobile developer, to enter into a service contract. Your acceptance constitutes conclusion of the contract.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">2. Subject of the Agreement</h2>
-          <p>[Describe products/services, delivery/provision terms, access to digital content, etc.]</p>
-        </section>
+        <h2>2. Scope</h2>
+        <p>Services: mobile app development, design, integrations, technical support. Delivered remotely.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">3. Price and Payment</h2>
-          <p>[Specify prices, currency, taxes (if any). Payment via a secure payment gateway (e.g., Robokassa). Card data is entered on the gateway side; the seller does not store card details.]</p>
-        </section>
+        <h2>3. Payment</h2>
+        <p>Pricing is individual. Payment via secure gateways (e.g., Robokassa). Card data is not stored by the seller.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">4. Delivery/Access</h2>
-          <p>[Timing and method of service provision or digital access.]</p>
-        </section>
+        <h2>4. Delivery</h2>
+        <p>Timeline is discussed in advance. Delivery via email, cloud storage, or repository access.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">5. Refunds</h2>
-          <p>[Refund policy and how to request a refund. Contact: <a href="mailto:whitepanda205@icloud.com" class="text-blue-600 hover:underline">whitepanda205@icloud.com</a>.]</p>
-        </section>
+        <h2>5. Refunds</h2>
+        <p>Full refund if canceled before work starts. Partial refund may be issued after start. Contact: <a href="mailto:whitepanda205@icloud.com">whitepanda205@icloud.com</a>.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">6. Personal Data</h2>
-          <p>[Refer to the <a href="privacy-policy.html" class="text-blue-600 hover:underline">Privacy Policy</a>. Consent to processing is given at checkout.]</p>
-        </section>
+        <h2>6. Data</h2>
+        <p>The client consents to personal data processing when placing an order. See the <a href="/privacy-policy.html">Privacy Policy</a>.</p>
 
-        <section class="space-y-2">
-          <h2 class="text-xl font-semibold">7. Details and Contacts</h2>
-          <p>Responsible person: <strong>Natalya Atyukova</strong><br>Email: <a href="mailto:whitepanda205@icloud.com" class="text-blue-600 hover:underline">whitepanda205@icloud.com</a></p>
-        </section>
+        <h2>7. Details and Contacts</h2>
+        <p>Responsible person: <strong>Natalya Atyukova</strong><br/>Email: <a href="mailto:whitepanda205@icloud.com">whitepanda205@icloud.com</a></p>
       </article>
     </main>
 
@@ -118,7 +91,7 @@
           <p><span class="font-medium">Дата постановки на учёт:</span> 21.12.2024</p>
           <p><span class="font-medium">Налоговая инспекция:</span> Межрайонная инспекция ФНС №12 по Саратовской области</p>
           <p><span class="font-medium">Основание:</span> Справка КНД 1122035, № 88726675 от 06.09.2025</p>
-          <p><span class="font-medium">Контактный email:</span> [указать вручную]</p>
+          <p><span class="font-medium">Контактный email:</span> <a class="text-blue-600 hover:underline" href="mailto:whitepanda205@icloud.com">whitepanda205@icloud.com</a></p>
         </div>
         <!-- EN -->
         <div id="req-en" class="space-y-1 hidden">
@@ -129,18 +102,18 @@
           <p><span class="font-medium">Registered on:</span> December 21, 2024</p>
           <p><span class="font-medium">Tax office:</span> Interdistrict Tax Inspectorate No. 12, Saratov Region</p>
           <p><span class="font-medium">Document:</span> Certificate KND 1122035, No. 88726675 dated September 6, 2025</p>
-          <p><span class="font-medium">Contact email:</span> [provide manually]</p>
+          <p><span class="font-medium">Contact email:</span> <a class="text-blue-600 hover:underline" href="mailto:whitepanda205@icloud.com">whitepanda205@icloud.com</a></p>
         </div>
       </div>
     </section>
 
     <footer class="border-t border-gray-200 py-8">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-600 flex items-center justify-between">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-600 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <p>© <span id="year"></span> Natalya Atyukova</p>
-        <nav class="flex items-center gap-4">
-          <a href="index.html" class="hover:text-gray-900">Главная</a>
-          <a href="privacy-policy.html" class="hover:text-gray-900">Политика конфиденциальности</a>
-        </nav>
+        <div class="flex items-center gap-4">
+          <a href="mailto:whitepanda205@icloud.com" class="hover:text-gray-900">whitepanda205@icloud.com</a>
+          <a href="/privacy-policy.html" class="hover:text-gray-900">Политика конфиденциальности</a>
+        </div>
       </div>
     </footer>
 
@@ -155,7 +128,6 @@
         btns.forEach(b=>{const active=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(active)); b.classList.toggle('text-gray-800',active); b.classList.toggle('text-gray-500',!active)});
         document.documentElement.setAttribute('lang',l);
         try{localStorage.setItem('lang',l)}catch(_){ }
-        // Toggle requisites block if present
         const reqRu=document.getElementById('req-ru');
         const reqEn=document.getElementById('req-en');
         if(reqRu && reqEn){
@@ -168,3 +140,4 @@
     </script>
   </body>
   </html>
+

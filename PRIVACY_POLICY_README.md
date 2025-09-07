@@ -71,7 +71,7 @@
 
 ## Контактная информация
 
-**Email:** whitepanda205@icloud.com
+**Email:** atukowa.natalya@yandex.ru
 
 ## Дата обновления
 

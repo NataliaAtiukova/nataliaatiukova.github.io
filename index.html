@@ -1,3 +1,289 @@
----
-layout: front
----
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Наталья Атьюкова — Портфолио мобильного разработчика</title>
+    <meta name="description" content="Портфолио Натальи Атьюковой: iOS и Android разработки, проекты, навыки и контакты." />
+    <meta name="color-scheme" content="light dark" />
+
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="16" fill="%231f2937"/><text x="50" y="58" font-size="52" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif">NA</text></svg>' />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: { DEFAULT: '#2563eb' }
+            },
+            fontFamily: {
+              sans: [
+                'ui-sans-serif','system-ui','-apple-system','Segoe UI','Roboto','Ubuntu','Cantarell','Noto Sans','Helvetica Neue','Arial'
+              ]
+            }
+          }
+        }
+      }
+    </script>
+    <style>html{scroll-behavior:smooth}</style>
+    <script>(function(){try{const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark')}catch(_){}})();</script>
+  </head>
+  <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 antialiased">
+    <div class="min-h-screen flex flex-col">
+      <!-- Top Nav -->
+      <header class="sticky top-0 z-40 border-b border-gray-200/60 dark:border-gray-800 bg-white/90 dark:bg-gray-900/80 backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <a href="#top" class="inline-flex items-center gap-2 font-semibold text-gray-900 dark:text-white" aria-label="На главную">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-primary text-white">NA</span>
+              <span>Наталья Атьюкова</span>
+            </a>
+
+            <!-- Desktop menu -->
+            <nav class="hidden md:flex items-center gap-6">
+              <a href="#about" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Обо мне</a>
+              <a href="#skills" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Навыки</a>
+              <a href="#projects" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Проекты</a>
+              <a href="#contact" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Контакты</a>
+              <a href="privacy-policy.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Политика</a>
+            </nav>
+
+            <div class="flex items-center gap-1">
+              <!-- Theme toggle -->
+              <button id="theme-toggle" type="button" class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Переключить тему" aria-pressed="false">
+                <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:inline" viewBox="0 0 20 20" fill="currentColor"><path d="M10 3a1 1 0 011 1v1a1 1 0 11-2 0V4a1 1 0 011-1zm0 12a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM4 9a1 1 0 100 2H5a1 1 0 100-2H4zm10 0a1 1 0 100 2h1a1 1 0 100-2h-1zM5.05 5.05a1 1 0 011.414 0l.707.707A1 1 0 116.464 7.17l-.707-.707a1 1 0 010-1.414zm7.071 7.07a1 1 0 011.414 0l.707.708a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.415zM3 10a7 7 0 1114 0A7 7 0 013 10z"/></svg>
+                <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+              </button>
+              <!-- Burger -->
+              <button id="burger" class="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <nav id="mobile-menu" class="md:hidden hidden border-t border-gray-200/60 dark:border-gray-800">
+          <div class="px-4 py-3 space-y-2 bg-white dark:bg-gray-900">
+            <a href="#about" class="block text-gray-700 dark:text-gray-200">Обо мне</a>
+            <a href="#skills" class="block text-gray-700 dark:text-gray-200">Навыки</a>
+            <a href="#projects" class="block text-gray-700 dark:text-gray-200">Проекты</a>
+            <a href="#contact" class="block text-gray-700 dark:text-gray-200">Контакты</a>
+            <a href="privacy-policy.html" class="block text-gray-700 dark:text-gray-200">Политика</a>
+          </div>
+        </nav>
+      </header>
+
+      <main id="top" class="flex-1">
+        <!-- Hero -->
+        <section class="relative">
+          <div class="absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 to-transparent dark:from-primary/10"></div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">Добро пожаловать в портфолио мобильного разработчика</h1>
+              <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Я Наталья Атьюкова, мобильный разработчик, создающий современные и удобные приложения для iOS и Android. Использую современные инструменты — Swift, SwiftUI, Kotlin, Firebase — чтобы разрабатывать мощные кроссплатформенные решения. Ознакомьтесь с моими проектами ниже или посетите мой GitHub!</p>
+              <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#projects" class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2.5 text-white font-medium hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">Смотреть проекты</a>
+                <a href="https://github.com/NatalyaAtyukova" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Мой GitHub</a>
+              </div>
+            </div>
+            <div class="relative md:justify-self-end w-full max-w-lg mx-auto rounded-2xl overflow-hidden shadow">
+              <img src="img/header.jpg" alt="Фоновое изображение — портфолио мобильного разработчика" loading="eager" decoding="async" class="w-full h-64 sm:h-80 md:h-96 object-cover" width="1024" height="768" />
+            </div>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="py-16 sm:py-24">
+          <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Обо мне</h2>
+            <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">Я Наталья Атьюкова, увлечённый мобильный разработчик, создающий инновационные решения для iOS и Android. Владею современными технологиями: Swift, SwiftUI, Kotlin, Firebase. Разрабатываю мощные и удобные приложения, которые делают жизнь пользователей проще. Посмотрите мой GitHub, чтобы узнать больше о моих проектах!</p>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="py-16 sm:py-24 bg-gray-50 dark:bg-gray-950/30 border-y border-gray-200/60 dark:border-gray-800">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white text-center">Навыки и экспертиза</h2>
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <article class="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6">
+                <div class="text-primary">
+                  <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                </div>
+                <h3 class="mt-4 font-semibold">Разработка iOS</h3>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Эксперт в создании надёжных iOS‑приложений на Swift и SwiftUI, обеспечиваю плавный и приятный пользовательский опыт.</p>
+              </article>
+              <article class="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6">
+                <div class="text-primary">
+                  <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3"/></svg>
+                </div>
+                <h3 class="mt-4 font-semibold">Разработка Android</h3>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Профессионал в разработке Android‑приложений на Kotlin, создаю нативные приложения с современным Material Design.</p>
+              </article>
+              <article class="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6">
+                <div class="text-primary">
+                  <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h8m-8 5h16"/></svg>
+                </div>
+                <h3 class="mt-4 font-semibold">Кроссплатформенные решения</h3>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Опыт поддержки приложений для iOS и Android, единый UX на всех устройствах.</p>
+              </article>
+              <article class="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6">
+                <div class="text-primary">
+                  <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M5 7v10a2 2 0 002 2h10a2 2 0 002-2V7"/></svg>
+                </div>
+                <h3 class="mt-4 font-semibold">Интеграция с бэкендом</h3>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Firebase, REST API и базы данных для полноценных мобильных приложений.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-16 sm:py-24">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- iOS -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white text-center">iOS‑приложения</h2>
+            <div class="mt-10 space-y-12">
+              <!-- iOS Project 1: Логистическое приложение -->
+              <article class="grid lg:grid-cols-2 gap-6 items-start">
+                <div class="grid grid-cols-2 gap-4">
+                  <img src="img/portfolio/1.jpg" alt="Логистическое приложение — экран 1" loading="lazy" decoding="async" class="w-full h-48 object-cover rounded-lg" width="800" height="600" />
+                  <img src="img/portfolio/2.jpg" alt="Логистическое приложение — экран 2" loading="lazy" decoding="async" class="w-full h-48 object-cover rounded-lg" width="800" height="600" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Логистическое приложение</h3>
+                  <p class="mt-2 text-gray-700 dark:text-gray-300">Индивидуальное решение для управления складом, отслеживания доставок и оптимизации маршрутов. Реализовано с акцентом на обновление данных в реальном времени и безопасность.</p>
+                </div>
+              </article>
+
+              <!-- iOS Project 2: Платформа для курсов -->
+              <article class="grid lg:grid-cols-2 gap-6 items-start">
+                <div class="grid grid-cols-2 gap-4">
+                  <img src="img/portfolio/3.jpg" alt="Платформа для курсов — экран 1" loading="lazy" decoding="async" class="w-full h-48 object-cover rounded-lg" width="800" height="600" />
+                  <img src="img/portfolio/4.jpg" alt="Платформа для курсов — экран 2" loading="lazy" decoding="async" class="w-full h-48 object-cover rounded-lg" width="800" height="600" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Платформа для курсов</h3>
+                  <p class="mt-2 text-gray-700 dark:text-gray-300">Платформа для блогеров и экспертов, позволяющая публиковать, управлять и продавать курсы. Используются Swift, SwiftUI и Firebase для удобной работы с данными и адаптивного дизайна.</p>
+                </div>
+              </article>
+
+              <!-- iOS Project 3: NutriAI -->
+              <article class="grid lg:grid-cols-2 gap-6 items-start">
+                <div class="grid grid-cols-2 gap-4">
+                  <img src="img/portfolio/5.jpg" alt="NutriAI — экран 1" loading="lazy" decoding="async" class="w-full h-48 object-cover rounded-lg" width="800" height="600" />
+                  <img src="img/portfolio/6.jpg" alt="NutriAI — экран 2" loading="lazy" decoding="async" class="w-full h-48 object-cover rounded-lg" width="800" height="600" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">NutriAI</h3>
+                  <p class="mt-2 text-gray-700 dark:text-gray-300">Инновационное iOS‑приложение для отслеживания калорий, активности и достижения фитнес‑целей. Использует Swift, SwiftUI, SwiftData, HealthKit и AI для персональных рекомендаций.</p>
+                  <ul class="mt-3 list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 text-sm">
+                    <li><strong>Учёт калорий:</strong> визуализация потребления, макроэлементов и персональные советы.</li>
+                    <li><strong>Активности:</strong> ходьба, бег, вело и другие сессии с таймером и историей.</li>
+                    <li><strong>Интеграция с HealthKit:</strong> синхронизация калорий, шагов, упражнений и сна.</li>
+                    <li><strong>Персональное питание:</strong> AI‑рационы под цели: сбалансированное, растительное и др.</li>
+                    <li><strong>Цели:</strong> установка и отслеживание прогресса по калориям и активности.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <!-- Android -->
+            <h2 class="mt-20 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white text-center">Android‑приложения</h2>
+            <div class="mt-10 space-y-12">
+              <!-- Tarot app -->
+              <article class="grid lg:grid-cols-2 gap-6 items-start">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <img src="img/portfolio/tarot1.jpg" alt="Таро — экран 1" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-lg" width="480" height="960" />
+                  <img src="img/portfolio/tarot2.jpg" alt="Таро — экран 2" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-lg" width="480" height="960" />
+                  <img src="img/portfolio/tarot3.jpg" alt="Таро — экран 3" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-lg" width="480" height="960" />
+                  <img src="img/portfolio/tarot4.jpg" alt="Таро — экран 4" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-lg" width="480" height="960" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Приложение Таро</h3>
+                  <p class="mt-2 text-gray-700 dark:text-gray-300">Элегантное и интуитивное приложение для гадания на Таро. Недавно обновлено для ещё большего удобства и красоты.</p>
+                  <ul class="mt-3 list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 text-sm">
+                    <li><strong>Интуитивные расклады:</strong> 3, 5 и 10 карт для глубоких гаданий.</li>
+                    <li><strong>Бесплатно:</strong> все расклады доступны без подписки.</li>
+                    <li><strong>Визуал:</strong> градиенты, новые карты, тени, улучшенная типографика.</li>
+                    <li><strong>Навигация:</strong> плавные переходы и удобное меню.</li>
+                  </ul>
+                  <p class="mt-4"><a href="https://www.rustore.ru/catalog/app/com.example.tarotapp" target="_blank" rel="noopener" class="inline-flex items-center rounded-md bg-primary px-4 py-2.5 text-white hover:opacity-90">Скачать в RuStore</a></p>
+                </div>
+              </article>
+
+              <!-- Daily Habits -->
+              <article class="grid lg:grid-cols-2 gap-6 items-start">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <img src="img/portfolio/habits1.jpg" alt="Daily Habits — экран 1" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-lg" width="480" height="960" />
+                  <img src="img/portfolio/habits2.jpg" alt="Daily Habits — экран 2" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-lg" width="480" height="960" />
+                  <img src="img/portfolio/habits3.jpg" alt="Daily Habits — экран 3" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-lg" width="480" height="960" />
+                  <img src="img/portfolio/habits4.jpg" alt="Daily Habits — экран 4" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-lg" width="480" height="960" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Daily Habits</h3>
+                  <p class="mt-2 text-gray-700 dark:text-gray-300">Мощное приложение для формирования привычек и личностного роста. Интуитивный интерфейс и аналитика помогают достигать целей.</p>
+                  <ul class="mt-3 list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 text-sm">
+                    <li><strong>Постановка целей:</strong> персонализированные цели и параметры.</li>
+                    <li><strong>Отслеживание прогресса:</strong> статистика и визуализация.</li>
+                    <li><strong>Формирование привычек:</strong> научный подход к изменениям.</li>
+                    <li><strong>Аналитика:</strong> глубокий анализ ваших привычек.</li>
+                  </ul>
+                  <p class="mt-4"><a href="https://www.rustore.ru/catalog/app/com.habittracker.dailyhabits" target="_blank" rel="noopener" class="inline-flex items-center rounded-md bg-primary px-4 py-2.5 text-white hover:opacity-90">Скачать в RuStore</a></p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-16 sm:py-24 bg-gray-50 dark:bg-gray-950/30 border-t border-gray-200/60 dark:border-gray-800">
+          <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Связаться со мной</h2>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">Если вы хотите обсудить проект, сотрудничество или просто поздороваться — напишите мне на почту или загляните на мой GitHub!</p>
+            </div>
+            <div class="mt-8 grid sm:grid-cols-3 gap-6">
+              <a href="mailto:whitepanda205@icloud.com" class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 text-center hover:shadow">
+                <div class="text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">whitepanda205@icloud.com</div>
+              </a>
+              <a href="https://github.com/NatalyaAtyukova" target="_blank" rel="noopener" class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 text-center hover:shadow">
+                <div class="text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">GitHub: NatalyaAtyukova</div>
+              </a>
+              <a href="privacy-policy.html" class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 text-center hover:shadow">
+                <div class="font-semibold text-gray-800 dark:text-gray-200">Политика конфиденциальности</div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-gray-200/60 dark:border-gray-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-gray-600 dark:text-gray-400">© <span id="year"></span> Наталья Атьюкова</p>
+          <div class="flex items-center gap-4 text-sm">
+            <a href="mailto:whitepanda205@icloud.com" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Email</a>
+            <a href="https://github.com/NatalyaAtyukova" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">GitHub</a>
+            <a href="privacy-policy.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Политика</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Footer year
+      const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+      // Theme toggle
+      const themeBtn=document.getElementById('theme-toggle');
+      const updateIcons=()=>{const isDark=document.documentElement.classList.contains('dark');themeBtn?.setAttribute('aria-pressed',String(isDark));document.getElementById('icon-sun')?.classList.toggle('hidden',!isDark);document.getElementById('icon-moon')?.classList.toggle('hidden',isDark)};updateIcons();
+      themeBtn?.addEventListener('click',()=>{const root=document.documentElement;const makeDark=!root.classList.contains('dark');root.classList.toggle('dark',makeDark);try{localStorage.setItem('theme',makeDark?'dark':'light')}catch(_){}updateIcons();});
+      // Burger menu
+      const burger=document.getElementById('burger'); const mobile=document.getElementById('mobile-menu');
+      burger?.addEventListener('click',()=>{const expanded=burger.getAttribute('aria-expanded')==='true';burger.setAttribute('aria-expanded',String(!expanded));mobile?.classList.toggle('hidden');});
+    </script>
+    <noscript><div style="position:fixed;inset:auto 0 0 0;background:#111827;color:#fff;padding:8px 16px;font:12px ui-sans-serif,system-ui">JavaScript отключён: тёмная тема и меню не активны.</div></noscript>
+  </body>
+  </html>

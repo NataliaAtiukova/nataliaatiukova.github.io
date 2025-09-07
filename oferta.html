@@ -106,6 +106,34 @@
       </article>
     </main>
 
+    <!-- Requisites block -->
+    <section id="requisites" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+      <div class="mt-8 text-sm bg-gray-50 border border-gray-200 rounded p-4">
+        <!-- RU -->
+        <div id="req-ru" class="space-y-1">
+          <h2 class="font-semibold">Реквизиты самозанятого</h2>
+          <p><span class="font-medium">ФИО:</span> Атюкова Наталья Владимировна</p>
+          <p><span class="font-medium">ИНН:</span> 643404462600</p>
+          <p><span class="font-medium">Налоговый режим:</span> Налог на профессиональный доход (самозанятый)</p>
+          <p><span class="font-medium">Дата постановки на учёт:</span> 21.12.2024</p>
+          <p><span class="font-medium">Налоговая инспекция:</span> Межрайонная инспекция ФНС №12 по Саратовской области</p>
+          <p><span class="font-medium">Основание:</span> Справка КНД 1122035, № 88726675 от 06.09.2025</p>
+          <p><span class="font-medium">Контактный email:</span> [указать вручную]</p>
+        </div>
+        <!-- EN -->
+        <div id="req-en" class="space-y-1 hidden">
+          <h2 class="font-semibold">Self-Employed Details</h2>
+          <p><span class="font-medium">Full name:</span> Nataliya Atyukova</p>
+          <p><span class="font-medium">Taxpayer ID (INN):</span> 643404462600</p>
+          <p><span class="font-medium">Tax status:</span> Self-employed (Professional Income Tax)</p>
+          <p><span class="font-medium">Registered on:</span> December 21, 2024</p>
+          <p><span class="font-medium">Tax office:</span> Interdistrict Tax Inspectorate No. 12, Saratov Region</p>
+          <p><span class="font-medium">Document:</span> Certificate KND 1122035, No. 88726675 dated September 6, 2025</p>
+          <p><span class="font-medium">Contact email:</span> [provide manually]</p>
+        </div>
+      </div>
+    </section>
+
     <footer class="border-t border-gray-200 py-8">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-600 flex items-center justify-between">
         <p>© <span id="year"></span> Natalya Atyukova</p>
@@ -127,10 +155,16 @@
         btns.forEach(b=>{const active=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(active)); b.classList.toggle('text-gray-800',active); b.classList.toggle('text-gray-500',!active)});
         document.documentElement.setAttribute('lang',l);
         try{localStorage.setItem('lang',l)}catch(_){ }
+        // Toggle requisites block if present
+        const reqRu=document.getElementById('req-ru');
+        const reqEn=document.getElementById('req-en');
+        if(reqRu && reqEn){
+          if(l==='en'){reqRu.classList.add('hidden'); reqEn.classList.remove('hidden');}
+          else{reqEn.classList.add('hidden'); reqRu.classList.remove('hidden');}
+        }
       }
       btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
       (function(){try{const saved=localStorage.getItem('lang'); if(saved) setLang(saved);}catch(_){}})();
     </script>
   </body>
   </html>
-

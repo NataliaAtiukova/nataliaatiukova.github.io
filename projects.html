@@ -24,7 +24,10 @@
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <!-- Каталог приложений (Robokassa requirements) -->
       <section aria-labelledby="apps-catalog" class="mb-12">
-        <h2 id="apps-catalog" class="text-2xl sm:text-3xl font-bold text-gray-900">Каталог приложений</h2>
+        <h2 id="apps-catalog" class="text-2xl sm:text-3xl font-bold text-gray-900">
+          <span class="lang-ru">Каталог приложений</span>
+          <span class="lang-en hidden">Apps Catalog</span>
+        </h2>
         <p class="lang-ru mt-2 text-gray-600">Список мобильных приложений с описанием, ценой и ссылками.</p>
         <p class="lang-en hidden mt-2 text-gray-600">List of mobile apps with descriptions, price and links.</p>
         <h3 class="lang-ru mt-6 text-xl font-semibold text-gray-900">Приложения в RuStore</h3>
@@ -185,6 +188,9 @@
           if(ru&&en){en.classList.add('hidden'); ru.classList.remove('hidden');}
           l='ru';
         }
+        // Ensure H2 title also switches even without CSS classes
+        const title=document.getElementById('apps-catalog');
+        if(title){ title.textContent = l==='en' ? 'Apps Catalog' : 'Каталог приложений'; }
         toggleLangBlocks(l);
         btns.forEach(b=>{const a=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(a)); b.classList.toggle('text-gray-800',a); b.classList.toggle('text-gray-500',!a)});
         document.documentElement.setAttribute('lang',l); try{localStorage.setItem('lang',l)}catch(_){}}

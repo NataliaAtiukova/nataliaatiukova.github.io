@@ -472,10 +472,7 @@
         document.getElementById('hero-en')?.classList.toggle('hidden',!isEn);
         document.getElementById('about-ru')?.classList.toggle('hidden',isEn);
         document.getElementById('about-en')?.classList.toggle('hidden',!isEn);
-        document.getElementById('ios-title-ru')?.classList.toggle('hidden',isEn);
-        document.getElementById('ios-title-en')?.classList.toggle('hidden',!isEn);
-        document.getElementById('android-title-ru')?.classList.toggle('hidden',isEn);
-        document.getElementById('android-title-en')?.classList.toggle('hidden',!isEn);
+        // iOS/Android sections removed from homepage
         // Toggle generic RU/EN blocks
         document.querySelectorAll('.ru-only').forEach(el=>el.classList.toggle('hidden',isEn));
         document.querySelectorAll('.en-only').forEach(el=>el.classList.toggle('hidden',!isEn));

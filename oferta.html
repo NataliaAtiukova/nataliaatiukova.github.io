@@ -112,6 +112,7 @@
         <p>© <span id="year"></span> Natalia Atiukova</p>
         <div class="flex items-center gap-4">
           <a href="mailto:atukowa.natalya@yandex.ru" class="hover:text-gray-900">atukowa.natalya@yandex.ru</a>
+          <a href="user-agreement.html" class="hover:text-gray-900">Пользовательское соглашение</a>
           <a href="privacy-policy.html" class="hover:text-gray-900">Политика конфиденциальности</a>
         </div>
       </div>
@@ -137,6 +138,8 @@
         // Footer label
         const pol=document.querySelector('footer a[href="privacy-policy.html"]');
         if(pol) pol.textContent = (l==='en') ? 'Privacy Policy' : 'Политика конфиденциальности';
+        const terms=document.querySelector('footer a[href="user-agreement.html"]');
+        if(terms) terms.textContent = (l==='en') ? 'User Agreement' : 'Пользовательское соглашение';
       }
       btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
       (function(){try{const saved=localStorage.getItem('lang'); if(saved) setLang(saved);}catch(_){}})();

@@ -111,6 +111,7 @@
         <p>© <span id="year"></span> Natalia Atiukova</p>
         <nav class="flex items-center gap-4">
           <a href="index.html" class="hover:text-gray-900">Главная</a>
+          <a href="user-agreement.html" class="hover:text-gray-900">Пользовательское соглашение</a>
           <a href="privacy-policy.html" class="hover:text-gray-900">Политика</a>
           <a href="oferta.html" class="hover:text-gray-900">Публичная оферта</a>
         </nav>
@@ -132,6 +133,14 @@
           l='ru';
         }
         btns.forEach(b=>{const active=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(active)); b.classList.toggle('text-gray-800',active); b.classList.toggle('text-gray-500',!active)});
+        const footerLinks=document.querySelectorAll('footer nav a');
+        footerLinks.forEach(link=>{
+          const href=link.getAttribute('href');
+          if(href==='index.html') link.textContent = (l==='en') ? 'Home' : 'Главная';
+          if(href==='user-agreement.html') link.textContent = (l==='en') ? 'User Agreement' : 'Пользовательское соглашение';
+          if(href==='privacy-policy.html') link.textContent = (l==='en') ? 'Privacy Policy' : 'Политика';
+          if(href==='oferta.html') link.textContent = (l==='en') ? 'Public Offer' : 'Публичная оферта';
+        });
         document.documentElement.setAttribute('lang',l);
         try{localStorage.setItem('lang',l)}catch(_){ }
       }

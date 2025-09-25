@@ -199,8 +199,9 @@
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-600 flex items-center justify-between">
         <p>© <span id="year"></span> Natalia Atiukova</p>
         <nav class="flex items-center gap-4">
-          <a href="privacy-policy.html" class="hover:text-gray-900">Privacy Policy</a>
-          <a href="oferta.html" class="hover:text-gray-900">Offer</a>
+          <a href="privacy-policy.html" class="hover:text-gray-900">Политика конфиденциальности</a>
+          <a href="user-agreement.html" class="hover:text-gray-900">Пользовательское соглашение</a>
+          <a href="oferta.html" class="hover:text-gray-900">Публичная оферта</a>
         </nav>
       </div>
     </footer>
@@ -228,6 +229,13 @@
         // h2 headings are duplicated for RU/EN and toggled via classes
         toggleLangBlocks(l);
         btns.forEach(b=>{const a=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(a)); b.classList.toggle('text-gray-800',a); b.classList.toggle('text-gray-500',!a)});
+        const footerLinks=document.querySelectorAll('footer nav a');
+        footerLinks.forEach(link=>{
+          const href=link.getAttribute('href');
+          if(href==='privacy-policy.html') link.textContent = (l==='en') ? 'Privacy Policy' : 'Политика конфиденциальности';
+          if(href==='user-agreement.html') link.textContent = (l==='en') ? 'User Agreement' : 'Пользовательское соглашение';
+          if(href==='oferta.html') link.textContent = (l==='en') ? 'Public Offer' : 'Публичная оферта';
+        });
         document.documentElement.setAttribute('lang',l); try{localStorage.setItem('lang',l)}catch(_){}}
       btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
       (function(){try{const saved=localStorage.getItem('lang'); if(saved) setLang(saved); else toggleLangBlocks('ru');}catch(_){}})();

@@ -51,6 +51,7 @@
               <a href="#projects" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"><span class="ru-only">Проекты</span><span class="en-only hidden">Projects</span></a>
               <a href="#contact" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"><span class="ru-only">Контакты</span><span class="en-only hidden">Contact</span></a>
               <a href="privacy-policy.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"><span class="ru-only">Политика</span><span class="en-only hidden">Privacy</span></a>
+              <a href="user-agreement.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"><span class="ru-only">Соглашение</span><span class="en-only hidden">Terms</span></a>
             </nav>
 
             <div class="flex items-center gap-2">
@@ -81,6 +82,7 @@
             <a href="#projects" class="block text-gray-700 dark:text-gray-200"><span class="ru-only">Проекты</span><span class="en-only hidden">Projects</span></a>
             <a href="#contact" class="block text-gray-700 dark:text-gray-200"><span class="ru-only">Контакты</span><span class="en-only hidden">Contact</span></a>
             <a href="privacy-policy.html" class="block text-gray-700 dark:text-gray-200"><span class="ru-only">Политика</span><span class="en-only hidden">Privacy</span></a>
+            <a href="user-agreement.html" class="block text-gray-700 dark:text-gray-200"><span class="ru-only">Соглашение</span><span class="en-only hidden">Terms</span></a>
             <div class="pt-2 flex items-center gap-2">
               <button data-lang="ru" class="lang-btn px-2 py-1 rounded-md text-xs border border-gray-300 text-gray-800" aria-pressed="true">RU</button>
               <button data-lang="en" class="lang-btn px-2 py-1 rounded-md text-xs border border-gray-300 text-gray-500" aria-pressed="false">EN</button>
@@ -306,6 +308,10 @@
               <span class="ru-only hidden">Политика</span>
               <span class="en-only">Policy</span>
             </a>
+            <a href="user-agreement.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <span class="ru-only hidden">Соглашение</span>
+              <span class="en-only">Terms</span>
+            </a>
           </div>
         </div>
       </footer>
@@ -337,8 +343,8 @@
         document.querySelectorAll('.lang-en').forEach(el=>el.classList.toggle('hidden',!isEn));
         // Nav labels
         const navMap = isEn ? {
-          about: 'About', skills: 'Skills', projects: 'Projects', contact: 'Contact', policy: 'Policy'
-        } : { about: 'Обо мне', skills: 'Навыки', projects: 'Проекты', contact: 'Контакты', policy: 'Политика' };
+          about: 'About', skills: 'Skills', projects: 'Projects', contact: 'Contact', policy: 'Policy', terms: 'Terms'
+        } : { about: 'Обо мне', skills: 'Навыки', projects: 'Проекты', contact: 'Контакты', policy: 'Политика', terms: 'Соглашение' };
         const desktopLinks = document.querySelectorAll('header nav a');
         desktopLinks?.forEach(a=>{
           if(a.getAttribute('href')==="projects.html") a.textContent = isEn ? 'Catalog' : 'Каталог';
@@ -346,7 +352,8 @@
           if(a.getAttribute('href')==="#skills") a.textContent = navMap.skills;
           if(a.getAttribute('href')==="#projects") a.textContent = navMap.projects;
           if(a.getAttribute('href')==="#contact") a.textContent = navMap.contact;
-          if(a.getAttribute('href')==="privacy-policy.html") a.textContent = isEn ? 'Policy' : 'Политика';
+          if(a.getAttribute('href')==="privacy-policy.html") a.textContent = navMap.policy;
+          if(a.getAttribute('href')==="user-agreement.html") a.textContent = navMap.terms;
         });
         const mobileLinks = document.querySelectorAll('#mobile-menu a');
         mobileLinks?.forEach(a=>{
@@ -355,12 +362,14 @@
           if(a.getAttribute('href')==="#skills") a.textContent = navMap.skills;
           if(a.getAttribute('href')==="#projects") a.textContent = navMap.projects;
           if(a.getAttribute('href')==="#contact") a.textContent = navMap.contact;
-          if(a.getAttribute('href')==="privacy-policy.html") a.textContent = isEn ? 'Policy' : 'Политика';
+          if(a.getAttribute('href')==="privacy-policy.html") a.textContent = navMap.policy;
+          if(a.getAttribute('href')==="user-agreement.html") a.textContent = navMap.terms;
         });
         // Footer labels
         const footerLinks = document.querySelectorAll('footer a');
         footerLinks?.forEach(a=>{
-          if(a.textContent.trim()==='Политика') a.textContent = isEn ? 'Policy' : 'Политика';
+          if(a.getAttribute('href')==="privacy-policy.html") a.textContent = navMap.policy;
+          if(a.getAttribute('href')==="user-agreement.html") a.textContent = navMap.terms;
         });
         langBtns.forEach(b=>{const active=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(active)); b.classList.toggle('text-gray-800',active); b.classList.toggle('text-gray-500',!active)});
         document.documentElement.setAttribute('lang', l==='en'?'en':'ru');

@@ -42,3 +42,70 @@ $theme-dark: #222;
         "mixins",
         "base"
 ;
+
+.provider-info-section {
+  padding: 80px 0;
+  background: #f8fafc;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.provider-info-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 25px 45px -20px rgba(15, 23, 42, 0.45);
+  padding: 48px 56px;
+}
+
+.provider-info-card h2 {
+  font-size: 2.25em;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 28px;
+}
+
+.provider-info-list {
+  margin: 0;
+}
+
+.provider-info-list dt {
+  font-size: 0.75em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.provider-info-list dd {
+  margin-left: 0;
+  margin-bottom: 20px;
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.provider-info-list dd:last-of-type {
+  margin-bottom: 0;
+}
+
+.provider-info-note {
+  margin: 32px 0 0 0;
+  font-size: 0.95em;
+  color: #64748b;
+}
+
+@media (max-width: 991px) {
+  .provider-info-card {
+    padding: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .provider-info-card {
+    padding: 28px 24px;
+  }
+
+  .provider-info-card h2 {
+    font-size: 1.75em;
+  }
+}

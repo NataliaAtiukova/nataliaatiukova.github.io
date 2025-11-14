@@ -73,6 +73,11 @@
       gallery = [];
     }
 
+    // Show zoom cursor on screenshots
+    document.querySelectorAll('#projects img').forEach(img=>{
+      img.classList.add('cursor-zoom-in');
+    });
+
     // Events
     btnClose.addEventListener('click', close);
     btnPrev.addEventListener('click', ()=> show(currentIndex-1));
@@ -96,4 +101,3 @@
     }, true);
   });
 })();
-

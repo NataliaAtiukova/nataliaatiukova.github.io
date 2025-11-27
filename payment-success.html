@@ -1,46 +1,24 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Оплата прошла успешно — Natalia Atiukova</title>
-    <meta name="description" content="Страница подтверждения успешной оплаты услуг Natalia Atiukova." />
+    <title>Payment Successful — Natalia Atiukova</title>
+    <meta name="description" content="Confirmation page for successful payments on Natalia Atiukova's services." />
     <meta name="color-scheme" content="light" />
     <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="16" fill="%231f2937"/><text x="50" y="58" font-size="52" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif">NA</text></svg>' />
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <style>html{scroll-behavior:smooth}</style>
-    <script>(function(){try{const t=localStorage.getItem('lang'); if(t){document.documentElement.setAttribute('lang',t)}}catch(_){}})();</script>
   </head>
   <body class="bg-white text-gray-800 antialiased">
     <header class="border-b border-gray-200 sticky top-0 bg-white/90 backdrop-blur z-30">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href="index.html" class="font-semibold text-gray-900">Natalia Atiukova</a>
-        <div class="flex items-center gap-2" role="group" aria-label="Language switcher">
-          <button data-lang="ru" class="lang-btn px-3 py-1.5 rounded-md text-sm border border-gray-300 text-gray-800 hover:bg-gray-50" aria-pressed="true">RU</button>
-          <button data-lang="en" class="lang-btn px-3 py-1.5 rounded-md text-sm border border-gray-300 text-gray-500 hover:bg-gray-50" aria-pressed="false">EN</button>
-        </div>
       </div>
     </header>
 
     <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <section id="success-ru" class="bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center space-y-6">
-        <div class="mx-auto w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center">
-          <span class="text-3xl" aria-hidden="true">✓</span>
-        </div>
-        <div class="space-y-3">
-          <h1 class="text-3xl font-semibold text-gray-900">Оплата прошла успешно</h1>
-          <p class="text-base text-gray-600">
-            Спасибо! Платеж принят, а чек с подтверждением отправлен на указанную почту или в приложение банка.
-          </p>
-        </div>
-        <div class="space-y-2 text-sm text-gray-500">
-          <p>Если у вас остались вопросы, напишите на <a href="mailto:atukowa.natalya@yandex.ru" class="text-gray-900 underline">atukowa.natalya@yandex.ru</a>.</p>
-          <p>Для продолжения вы можете вернуться на сайт.</p>
-        </div>
-        <a href="index.html" class="inline-flex items-center justify-center rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-gray-800">Вернуться на главную</a>
-      </section>
-
-      <section id="success-en" class="hidden bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center space-y-6">
+      <section class="bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center space-y-6">
         <div class="mx-auto w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center">
           <span class="text-3xl" aria-hidden="true">✓</span>
         </div>
@@ -62,45 +40,16 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-600 flex items-center justify-between">
         <p>© <span id="year"></span> Natalia Atiukova</p>
         <nav class="flex items-center gap-4">
-          <a href="privacy-policy.html" class="hover:text-gray-900">Политика конфиденциальности</a>
-          <a href="user-agreement.html" class="hover:text-gray-900">Пользовательское соглашение</a>
-          <a href="oferta.html" class="hover:text-gray-900">Публичная оферта</a>
+          <a href="privacy-policy.html" class="hover:text-gray-900">Privacy Policy</a>
+          <a href="user-agreement.html" class="hover:text-gray-900">User Agreement</a>
+          <a href="oferta.html" class="hover:text-gray-900">Public Offer</a>
         </nav>
       </div>
     </footer>
 
     <script>
-      const yearEl=document.getElementById('year'); if(yearEl) yearEl.textContent=new Date().getFullYear();
-      const ruSection=document.getElementById('success-ru');
-      const enSection=document.getElementById('success-en');
-      const langButtons=document.querySelectorAll('.lang-btn');
-      function setLang(lang){
-        const isEnglish=lang==='en';
-        enSection.classList.toggle('hidden',!isEnglish);
-        ruSection.classList.toggle('hidden',isEnglish);
-        langButtons.forEach(btn=>{
-          const active=btn.getAttribute('data-lang')===lang;
-          btn.setAttribute('aria-pressed',String(active));
-          btn.classList.toggle('text-gray-800',active);
-          btn.classList.toggle('text-gray-500',!active);
-        });
-        const footerLinks=document.querySelectorAll('footer nav a');
-        footerLinks.forEach(link=>{
-          const href=link.getAttribute('href');
-          if(href==='privacy-policy.html') link.textContent=isEnglish?'Privacy Policy':'Политика конфиденциальности';
-          if(href==='user-agreement.html') link.textContent=isEnglish?'User Agreement':'Пользовательское соглашение';
-          if(href==='oferta.html') link.textContent=isEnglish?'Public Offer':'Публичная оферта';
-        });
-        document.documentElement.setAttribute('lang',isEnglish?'en':'ru');
-        try{localStorage.setItem('lang',isEnglish?'en':'ru');}catch(_){ }
-      }
-      langButtons.forEach(btn=>btn.addEventListener('click',()=>setLang(btn.getAttribute('data-lang'))));
-      (function(){
-        try{
-          const saved=localStorage.getItem('lang');
-          if(saved) setLang(saved);
-        }catch(_){ }
-      })();
+      const yearEl=document.getElementById('year');
+      if(yearEl) yearEl.textContent=new Date().getFullYear();
     </script>
   </body>
 </html>

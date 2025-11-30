@@ -1,10 +1,8 @@
 yandex.com, 2240956, DIRECT
+yango-ads.com, 2240956, DIRECT
+rubiconproject.com, 27969, RESELLER, 0bfd66d529a55807
 betweendigital.com, 43554, RESELLER
 openx.com, 541177349, RESELLER, 6a698e2ec38604c6
-pubmatic.com, 159668, RESELLER, 5d62403b186f2ace
-rubiconproject.com, 19724, RESELLER, 0bfd66d529a55807
-adcolony.com, 29b7f4a14dc689eb, RESELLER, 1ad675c9de6b5176
-emxdgt.com, 2047, RESELLER, 1e1d41537f7cad7f
 onetag.com, 5d1628750185ace, RESELLER
 loopme.com, 11278, RESELLER, 6c8d5f95897a5a3b
 appnexus.com, 13817, RESELLER, f5ab79cb980f11d1
@@ -543,3 +541,13 @@ dauup.com, 34191, RESELLER, 4daba13e2b0dfd92
 rubiconproject.com, 26270, RESELLER, 0bfd66d529a55807
 lijit.com, 541964, RESELLER, fafdf38b16bf6b2b #SOVRN
 inmobi.com, f73add69216f42d9ba45940a548416d3, RESELLER, 83e75a7ae333ca9d
+conversantmedia.com, 100949, RESELLER, 03113cd04947736d
+munimob.com, 2100033154, RESELLER, 09fcf65f918716a4
+playdigo.com, 2041, RESELLER, 92011346d63d3c30
+improvedigital.com, 2534, RESELLER
+acexchange.co.kr, 1288659831, RESELLER
+lijit.com, 558045, RESELLER, fafdf38b16bf6b2b #SOVRN
+video.unrulymedia.com, 389957698, RESELLER
+risecodes.com, 685c25b72cb7980001e4ff27, RESELLER
+criteo.com, b-062019, RESELLER, 9fac4a4a87c2a44f
+smaato.com, 1100058938, RESELLER, 07bcf65f187117b4

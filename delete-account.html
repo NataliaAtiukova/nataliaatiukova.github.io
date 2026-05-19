@@ -116,7 +116,8 @@
         document.documentElement.setAttribute('lang',lang);
         try{localStorage.setItem('lang',lang)}catch(_){}
       }
-      langButtons.forEach(btn=>btn.addEventListener('click',()=>setLang(btn.getAttribute('data-lang'))));
+      document.querySelectorAll('.lang-btn[data-lang="ru"]').forEach(btn=>btn.addEventListener('click',()=>setLang('ru')));
+      document.querySelectorAll('.lang-btn[data-lang="en"]').forEach(btn=>btn.addEventListener('click',()=>setLang('en')));
       (function(){
         try{
           const saved=localStorage.getItem('lang');

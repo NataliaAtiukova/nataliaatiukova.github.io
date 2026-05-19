@@ -183,7 +183,8 @@
           });
         }
       }
-      btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
+      document.querySelectorAll('.lang-btn[data-lang="ru"]').forEach(b=>b.addEventListener('click',()=>setLang('ru')));
+      document.querySelectorAll('.lang-btn[data-lang="en"]').forEach(b=>b.addEventListener('click',()=>setLang('en')));
       // initial
       (function(){try{const saved=localStorage.getItem('lang'); setLang(saved==='en'?'en':'ru');}catch(_){setLang('ru');}})();
     </script>

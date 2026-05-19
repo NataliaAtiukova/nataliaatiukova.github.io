@@ -389,7 +389,8 @@
       // Language toggle
       const langBtns=document.querySelectorAll('.lang-btn');
       function setLang(l){
-        const isEn = l==='en';
+        const lang = l === 'ru' ? 'ru' : 'en';
+        const isEn = lang === 'en';
         document.getElementById('hero-ru')?.classList.toggle('hidden',isEn);
         document.getElementById('hero-en')?.classList.toggle('hidden',!isEn);
         document.getElementById('about-ru')?.classList.toggle('hidden',isEn);
@@ -431,11 +432,12 @@
           if(a.getAttribute('href')==="privacy-policy.html") a.textContent = navMap.policy;
           if(a.getAttribute('href')==="user-agreement.html") a.textContent = navMap.terms;
         });
-        langBtns.forEach(b=>{const active=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(active)); b.classList.toggle('text-gray-800',active); b.classList.toggle('text-gray-500',!active)});
-        document.documentElement.setAttribute('lang', l==='en'?'en':'ru');
-        try{localStorage.setItem('lang', l)}catch(_){ }
+        langBtns.forEach(b=>{const active=b.getAttribute('data-lang')===lang; b.setAttribute('aria-pressed',String(active)); b.classList.toggle('text-gray-800',active); b.classList.toggle('text-gray-500',!active)});
+        document.documentElement.setAttribute('lang', lang);
+        try{localStorage.setItem('lang', lang)}catch(_){ }
       }
-      langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
+      document.querySelectorAll('.lang-btn[data-lang="ru"]').forEach(b=>b.addEventListener('click',()=>setLang('ru')));
+      document.querySelectorAll('.lang-btn[data-lang="en"]').forEach(b=>b.addEventListener('click',()=>setLang('en')));
       (function(){try{const saved=localStorage.getItem('lang'); setLang(saved==='en'?'en':'ru');}catch(_){setLang('ru');}})();
       // Burger menu
       const burger=document.getElementById('burger'); const mobile=document.getElementById('mobile-menu');

@@ -205,7 +205,8 @@
           if(href==='privacy-policy.html') link.textContent = (l==='en') ? 'Privacy Policy' : 'Политика конфиденциальности';
         });
       }
-      btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
+      document.querySelectorAll('.lang-btn[data-lang="ru"]').forEach(b=>b.addEventListener('click',()=>setLang('ru')));
+      document.querySelectorAll('.lang-btn[data-lang="en"]').forEach(b=>b.addEventListener('click',()=>setLang('en')));
       (function(){try{const saved=localStorage.getItem('lang'); setLang(saved==='en'?'en':'ru');}catch(_){setLang('ru');}})();
     </script>
     <script src="js/site-v2.js?v=20260519d"></script>

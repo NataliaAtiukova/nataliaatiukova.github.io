@@ -548,23 +548,23 @@
         document.querySelectorAll('.en-only').forEach(n=>n.classList.toggle('hidden', lang!=='en'));
       }
       function setLang(l){
-        if(l==='en'){
+        const lang = l === 'ru' ? 'ru' : 'en';
+        if(lang==='en'){
           if(ru&&en){ru.classList.add('hidden'); en.classList.remove('hidden');}
         } else {
           if(ru&&en){en.classList.add('hidden'); ru.classList.remove('hidden');}
-          l='ru';
         }
         // h2 headings are duplicated for RU/EN and toggled via classes
-        toggleLangBlocks(l);
-        btns.forEach(b=>{const a=b.getAttribute('data-lang')===l; b.setAttribute('aria-pressed',String(a)); b.classList.toggle('text-gray-800',a); b.classList.toggle('text-gray-500',!a)});
+        toggleLangBlocks(lang);
+        btns.forEach(b=>{const a=b.getAttribute('data-lang')===lang; b.setAttribute('aria-pressed',String(a)); b.classList.toggle('text-gray-800',a); b.classList.toggle('text-gray-500',!a)});
         const footerLinks=document.querySelectorAll('footer nav a');
         footerLinks.forEach(link=>{
           const href=link.getAttribute('href');
-          if(href==='privacy-policy.html') link.textContent = (l==='en') ? 'Privacy Policy' : 'Политика конфиденциальности';
-          if(href==='user-agreement.html') link.textContent = (l==='en') ? 'User Agreement' : 'Пользовательское соглашение';
-          if(href==='oferta.html') link.textContent = (l==='en') ? 'Public Offer' : 'Публичная оферта';
+          if(href==='privacy-policy.html') link.textContent = (lang==='en') ? 'Privacy Policy' : 'Политика конфиденциальности';
+          if(href==='user-agreement.html') link.textContent = (lang==='en') ? 'User Agreement' : 'Пользовательское соглашение';
+          if(href==='oferta.html') link.textContent = (lang==='en') ? 'Public Offer' : 'Публичная оферта';
         });
-        document.documentElement.setAttribute('lang',l); try{localStorage.setItem('lang',l)}catch(_){}
+        document.documentElement.setAttribute('lang',lang); try{localStorage.setItem('lang',lang)}catch(_){}
         applyProjectFilter(activeFilter);
       }
 
@@ -659,7 +659,8 @@
         link.setAttribute('aria-label', title ? `${action} — ${title}` : action);
       });
 
-      btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
+      document.querySelectorAll('.lang-btn[data-lang="ru"]').forEach(b=>b.addEventListener('click',()=>setLang('ru')));
+      document.querySelectorAll('.lang-btn[data-lang="en"]').forEach(b=>b.addEventListener('click',()=>setLang('en')));
       (function(){
         try{
           const saved=localStorage.getItem('lang');

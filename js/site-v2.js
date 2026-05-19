@@ -113,7 +113,7 @@
       el.style.setProperty('--reveal-delay', (idx % 12) * 35 + 'ms');
     });
 
-    if (reduceMotion || !('IntersectionObserver' in window)) {
+    if (reduceMotion || window.innerWidth <= 768 || !('IntersectionObserver' in window)) {
       document.querySelectorAll('.site-reveal').forEach(function (el) {
         el.classList.add('is-visible');
       });

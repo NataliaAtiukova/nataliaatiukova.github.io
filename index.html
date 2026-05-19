@@ -31,7 +31,7 @@
     <style>html{scroll-behavior:smooth}</style>
     <script>(function(){try{const L=localStorage.getItem('lang');if(L){document.documentElement.setAttribute('lang',L)}}catch(_){}})();</script>
       <script data-site-theme-boot>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(_){}})();</script>
-      <link rel="stylesheet" href="css/site-v2.css?v=20260519e" />
+      <link rel="stylesheet" href="css/site-v2.css?v=20260519f" />
       
   </head>
   <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 antialiased site-v2">
@@ -59,7 +59,7 @@
 
             <div class="flex items-center gap-2">
               <!-- Lang toggle -->
-              <div class="hidden md:flex items-center gap-1" role="group" aria-label="Language switcher">
+              <div class="flex items-center gap-1" role="group" aria-label="Language switcher">
                 <button data-lang="ru" class="lang-btn px-2 py-1 rounded-md text-xs border border-gray-300 text-gray-800 hover:bg-gray-100" aria-pressed="true">RU</button>
                 <button data-lang="en" class="lang-btn px-2 py-1 rounded-md text-xs border border-gray-300 text-gray-500 hover:bg-gray-100" aria-pressed="false">EN</button>
               </div>
@@ -86,10 +86,6 @@
             <a href="#contact" class="block text-gray-700 dark:text-gray-200"><span class="ru-only">Контакты</span><span class="en-only hidden">Contact</span></a>
             <a href="privacy-policy.html" class="block text-gray-700 dark:text-gray-200"><span class="ru-only">Политика</span><span class="en-only hidden">Privacy</span></a>
             <a href="user-agreement.html" class="block text-gray-700 dark:text-gray-200"><span class="ru-only">Соглашение</span><span class="en-only hidden">Terms</span></a>
-            <div class="pt-2 flex items-center gap-2">
-              <button data-lang="ru" class="lang-btn px-2 py-1 rounded-md text-xs border border-gray-300 text-gray-800" aria-pressed="true">RU</button>
-              <button data-lang="en" class="lang-btn px-2 py-1 rounded-md text-xs border border-gray-300 text-gray-500" aria-pressed="false">EN</button>
-            </div>
           </div>
         </nav>
       </header>
@@ -444,6 +440,6 @@
       burger?.addEventListener('click',()=>{const expanded=burger.getAttribute('aria-expanded')==='true';burger.setAttribute('aria-expanded',String(!expanded));mobile?.classList.toggle('hidden');});
     </script>
     <noscript><div style="position:fixed;inset:auto 0 0 0;background:#111827;color:#fff;padding:8px 16px;font:12px ui-sans-serif,system-ui">JavaScript отключён: тёмная тема и меню не активны.</div></noscript>
-    <script src="js/site-v2.js?v=20260519e"></script>
+    <script src="js/site-v2.js?v=20260519f"></script>
 </body>
   </html>

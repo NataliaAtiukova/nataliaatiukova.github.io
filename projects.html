@@ -7,7 +7,30 @@
     <meta name="description" content="Selected mobile projects by Natalia Atiukova: iOS and Android apps." />
     <meta name="color-scheme" content="light" />
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <style>html{scroll-behavior:smooth}</style>
+    <style>
+      html{scroll-behavior:smooth}
+      a:focus-visible,button:focus-visible{
+        outline:2px solid #0f172a;
+        outline-offset:2px;
+        border-radius:0.5rem;
+      }
+      .project-chip{
+        display:inline-flex;
+        align-items:center;
+        border-radius:9999px;
+        border:1px solid #d1d5db;
+        padding:0.2rem 0.55rem;
+        font-size:0.75rem;
+        line-height:1rem;
+        color:#374151;
+        background:#f9fafb;
+      }
+      .project-filter-btn[aria-pressed="true"]{
+        background:#111827;
+        color:#fff;
+        border-color:#111827;
+      }
+    </style>
     <script>(function(){try{const t=localStorage.getItem('lang'); if(t){document.documentElement.setAttribute('lang',t)}}catch(_){}})();</script>
   </head>
   <body class="bg-white text-gray-800 antialiased">
@@ -38,6 +61,19 @@
           <li><a href="#ios-apps" class="text-blue-600 underline">🍏 iOS Apps</a></li>
           <li><a href="#flutter-apps" class="text-blue-600 underline">🔄 Cross‑platform (Flutter)</a></li>
         </ul>
+        <div class="mt-4 rounded-xl border border-gray-200 bg-gray-50 p-4">
+          <p class="text-sm font-medium text-gray-800 lang-ru">Фильтр проектов</p>
+          <p class="text-sm font-medium text-gray-800 lang-en hidden">Project Filters</p>
+          <div class="mt-3 flex flex-wrap gap-2" role="group" aria-label="Project filters">
+            <button data-filter="all" class="project-filter-btn rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100" aria-pressed="true"><span class="lang-ru">Все</span><span class="lang-en hidden">All</span></button>
+            <button data-filter="android" class="project-filter-btn rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100" aria-pressed="false">Android</button>
+            <button data-filter="ios" class="project-filter-btn rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100" aria-pressed="false">iOS</button>
+            <button data-filter="flutter" class="project-filter-btn rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100" aria-pressed="false">Flutter</button>
+            <button data-filter="published" class="project-filter-btn rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100" aria-pressed="false"><span class="lang-ru">Опубликовано</span><span class="lang-en hidden">Published</span></button>
+            <button data-filter="opensource" class="project-filter-btn rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100" aria-pressed="false">Open source</button>
+          </div>
+          <p id="project-filter-summary" class="mt-2 text-sm text-gray-600" aria-live="polite"></p>
+        </div>
       </section>
 
       <!-- Android apps -->
@@ -126,9 +162,9 @@
           <!-- Challenges -->
           <div class="border p-4 rounded-md bg-white">
             <div class="grid grid-cols-1 gap-4">
-              <div class="h-36 rounded bg-gray-100 flex items-center justify-center text-gray-500 text-sm">
-                <span class="lang-ru">Скриншоты скоро</span>
-                <span class="lang-en hidden">Screenshots coming soon</span>
+              <div class="grid grid-cols-2 gap-2" data-gallery>
+                <img src="img/projects/challenges/challenges_repo.png" alt="Challenges — GitHub preview" class="w-full h-36 object-cover rounded" loading="lazy" decoding="async">
+                <img src="img/projects/challenges/challenges_icon_playstore.png" alt="Challenges — app icon" class="w-full h-36 object-contain rounded bg-gray-50 p-2" loading="lazy" decoding="async">
               </div>
               <div>
                 <h3 class="text-lg font-semibold lang-ru">Challenges</h3>
@@ -223,9 +259,8 @@
           <!-- IMGConverter -->
           <div class="border p-4 rounded-md bg-white">
             <div class="grid grid-cols-1 gap-4">
-              <div class="h-36 rounded bg-gray-100 flex items-center justify-center text-gray-500 text-sm">
-                <span class="lang-ru">Скриншоты скоро</span>
-                <span class="lang-en hidden">Screenshots coming soon</span>
+              <div class="grid grid-cols-1 gap-2" data-gallery>
+                <img src="img/projects/imgconverter/imgconverter_repo.png" alt="IMGConverter — GitHub preview" class="w-full h-36 object-cover rounded" loading="lazy" decoding="async">
               </div>
               <div>
                 <h3 class="text-lg font-semibold lang-ru">IMGConverter</h3>
@@ -245,9 +280,11 @@
           <!-- justChat -->
           <div class="border p-4 rounded-md bg-white">
             <div class="grid grid-cols-1 gap-4">
-              <div class="h-36 rounded bg-gray-100 flex items-center justify-center text-gray-500 text-sm">
-                <span class="lang-ru">Скриншоты скоро</span>
-                <span class="lang-en hidden">Screenshots coming soon</span>
+              <div class="grid grid-cols-2 gap-2" data-gallery>
+                <img src="img/projects/justchat/justchat_repo.png" alt="justChat — GitHub preview" class="w-full h-36 object-cover rounded" loading="lazy" decoding="async">
+                <img src="img/projects/justchat/justchat_1.jpg" alt="justChat — asset 1" class="w-full h-36 object-cover rounded" loading="lazy" decoding="async">
+                <img src="img/projects/justchat/justchat_2.jpg" alt="justChat — asset 2" class="w-full h-36 object-cover rounded" loading="lazy" decoding="async">
+                <img src="img/projects/justchat/justchat_3.jpg" alt="justChat — asset 3" class="w-full h-36 object-cover rounded" loading="lazy" decoding="async">
               </div>
               <div>
                 <h3 class="text-lg font-semibold lang-ru">justChat</h3>
@@ -267,9 +304,8 @@
           <!-- TravelPlace -->
           <div class="border p-4 rounded-md bg-white">
             <div class="grid grid-cols-1 gap-4">
-              <div class="h-36 rounded bg-gray-100 flex items-center justify-center text-gray-500 text-sm">
-                <span class="lang-ru">Скриншоты скоро</span>
-                <span class="lang-en hidden">Screenshots coming soon</span>
+              <div class="grid grid-cols-1 gap-2" data-gallery>
+                <img src="img/projects/travelplace/travelplace_repo.png" alt="TravelPlace — GitHub preview" class="w-full h-36 object-cover rounded" loading="lazy" decoding="async">
               </div>
               <div>
                 <h3 class="text-lg font-semibold lang-ru">TravelPlace</h3>
@@ -433,9 +469,10 @@
           <!-- VoiceChat -->
           <div class="border p-4 rounded-md bg-white">
             <div class="grid grid-cols-1 gap-4">
-              <div class="h-36 rounded bg-gray-100 flex items-center justify-center text-gray-500 text-sm">
-                <span class="lang-ru">Скриншоты скоро</span>
-                <span class="lang-en hidden">Screenshots coming soon</span>
+              <div class="grid grid-cols-2 gap-2" data-gallery>
+                <img src="img/projects/voicechat/voicechat_repo.png" alt="VoiceChat — GitHub preview" class="w-full h-36 object-cover rounded" loading="lazy" decoding="async">
+                <img src="img/projects/voicechat/voicechat_launch.png" alt="VoiceChat — launch image" class="w-full h-36 object-contain rounded bg-gray-50 p-2" loading="lazy" decoding="async">
+                <img src="img/projects/voicechat/voicechat_icon.png" alt="VoiceChat — app icon" class="w-full h-36 object-contain rounded bg-gray-50 p-2" loading="lazy" decoding="async">
               </div>
               <div>
                 <h3 class="text-lg font-semibold lang-ru">VoiceChat</h3>
@@ -498,6 +535,9 @@
       const ru=document.getElementById('prj-ru');
       const en=document.getElementById('prj-en');
       const btns=document.querySelectorAll('.lang-btn');
+      const filterButtons=document.querySelectorAll('.project-filter-btn');
+      const summaryEl=document.getElementById('project-filter-summary');
+      let activeFilter='all';
       function toggleLangBlocks(lang){
         document.querySelectorAll('.lang-ru').forEach(n=>n.classList.toggle('hidden', lang==='en'));
         document.querySelectorAll('.lang-en').forEach(n=>n.classList.toggle('hidden', lang!=='en'));
@@ -522,9 +562,112 @@
           if(href==='user-agreement.html') link.textContent = (l==='en') ? 'User Agreement' : 'Пользовательское соглашение';
           if(href==='oferta.html') link.textContent = (l==='en') ? 'Public Offer' : 'Публичная оферта';
         });
-        document.documentElement.setAttribute('lang',l); try{localStorage.setItem('lang',l)}catch(_){}}
+        document.documentElement.setAttribute('lang',l); try{localStorage.setItem('lang',l)}catch(_){}
+        applyProjectFilter(activeFilter);
+      }
+
+      const projectCards=Array.from(document.querySelectorAll(
+        '#android-apps .border.p-4.rounded-md.bg-white, #ios-apps .border.p-4.rounded-md.bg-white, #flutter-apps .border.p-4.rounded-md.bg-white'
+      ));
+      const projectMeta={
+        mindcycle:{platform:'android',status:'published',tech:['Kotlin','Room']},
+        dailyhabits:{platform:'android',status:'published',tech:['Kotlin','Calendar UI']},
+        tarotapp:{platform:'android',status:'published',tech:['Kotlin']},
+        challenges:{platform:'android',status:'opensource',tech:['Kotlin','Room']},
+        logistic:{platform:'ios',status:'opensource',tech:['Swift','UIKit']},
+        coursesstack:{platform:'ios',status:'opensource',tech:['SwiftUI','Firebase']},
+        nutriai:{platform:'ios',status:'opensource',tech:['Swift','HealthKit']},
+        imgconverter:{platform:'ios',status:'opensource',tech:['Swift']},
+        justchat:{platform:'ios',status:'opensource',tech:['Swift','Firebase']},
+        travelplace:{platform:'ios',status:'opensource',tech:['SwiftUI']},
+        poopgo:{platform:'flutter',status:'published',tech:['Flutter']},
+        foodai:{platform:'flutter',status:'opensource',tech:['Flutter','AI APIs']},
+        yogaapp:{platform:'flutter',status:'published',tech:['Flutter']},
+        neighbourservice:{platform:'flutter',status:'opensource',tech:['Flutter']},
+        waterflow:{platform:'flutter',status:'published',tech:['Flutter']},
+        voicechat:{platform:'flutter',status:'opensource',tech:['Flutter','Firebase']}
+      };
+
+      function cardKey(card){
+        const gh=card.querySelector('a[href*="github.com/NataliaAtiukova/"]');
+        if(gh){return gh.href.replace(/\/+$/,'').split('/').pop().toLowerCase();}
+        const title=(card.querySelector('h3')?.textContent||'').toLowerCase();
+        if(title.includes('poopgo')) return 'poopgo';
+        return title.split(':')[0].trim().replace(/\s+/g,'');
+      }
+
+      function renderChips(card,meta){
+        if(card.querySelector('.project-chips')) return;
+        const textHost=card.querySelector('h3')?.parentElement;
+        if(!textHost) return;
+        const chips=document.createElement('div');
+        chips.className='project-chips mt-2 flex flex-wrap gap-2';
+        const platformChip=document.createElement('span');
+        platformChip.className='project-chip';
+        platformChip.textContent=meta.platform.toUpperCase();
+        chips.appendChild(platformChip);
+        meta.tech.forEach(t=>{
+          const chip=document.createElement('span');
+          chip.className='project-chip';
+          chip.textContent=t;
+          chips.appendChild(chip);
+        });
+        textHost.insertBefore(chips, textHost.querySelector('p'));
+      }
+
+      function applyProjectFilter(filter){
+        activeFilter=filter || activeFilter;
+        const lang=document.documentElement.getAttribute('lang')==='en' ? 'en' : 'ru';
+        let visible=0;
+        projectCards.forEach(card=>{
+          const key=cardKey(card);
+          const meta=projectMeta[key];
+          if(!meta){return;}
+          const show=
+            activeFilter==='all' ||
+            activeFilter===meta.platform ||
+            activeFilter===meta.status;
+          card.classList.toggle('hidden',!show);
+          if(show) visible+=1;
+        });
+        filterButtons.forEach(btn=>btn.setAttribute('aria-pressed', String(btn.dataset.filter===activeFilter)));
+        if(summaryEl){
+          summaryEl.textContent=(lang==='en')
+            ? `Showing ${visible} project(s)`
+            : `Показано проектов: ${visible}`;
+        }
+      }
+
+      projectCards.forEach(card=>{
+        const key=cardKey(card);
+        const meta=projectMeta[key];
+        if(!meta) return;
+        card.dataset.platform=meta.platform;
+        card.dataset.status=meta.status;
+        renderChips(card,meta);
+      });
+
+      filterButtons.forEach(btn=>btn.addEventListener('click',()=>applyProjectFilter(btn.dataset.filter)));
+
+      document.querySelectorAll('a[target="_blank"]').forEach(link=>{
+        if(link.getAttribute('aria-label')) return;
+        const card=link.closest('.border.p-4.rounded-md.bg-white');
+        const title=(card?.querySelector('h3')?.textContent||'').trim();
+        const action=link.textContent.trim().replace(/\s+/g,' ');
+        link.setAttribute('aria-label', title ? `${action} — ${title}` : action);
+      });
+
       btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
-      (function(){try{const saved=localStorage.getItem('lang'); if(saved) setLang(saved); else toggleLangBlocks('ru');}catch(_){}})();
+      (function(){
+        try{
+          const saved=localStorage.getItem('lang');
+          if(saved) setLang(saved);
+          else { toggleLangBlocks('ru'); applyProjectFilter('all'); }
+        }catch(_){
+          toggleLangBlocks('ru');
+          applyProjectFilter('all');
+        }
+      })();
     </script>
   </body>
   </html>

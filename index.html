@@ -436,7 +436,7 @@
         try{localStorage.setItem('lang', l)}catch(_){ }
       }
       langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
-      (function(){try{const saved=localStorage.getItem('lang'); if(saved) setLang(saved);}catch(_){}})();
+      (function(){try{const saved=localStorage.getItem('lang'); setLang(saved==='en'?'en':'ru');}catch(_){setLang('ru');}})();
       // Burger menu
       const burger=document.getElementById('burger'); const mobile=document.getElementById('mobile-menu');
       burger?.addEventListener('click',()=>{const expanded=burger.getAttribute('aria-expanded')==='true';burger.setAttribute('aria-expanded',String(!expanded));mobile?.classList.toggle('hidden');});

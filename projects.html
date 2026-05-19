@@ -663,8 +663,8 @@
       (function(){
         try{
           const saved=localStorage.getItem('lang');
-          if(saved) setLang(saved);
-          else { toggleLangBlocks('ru'); applyProjectFilter('all'); }
+          setLang(saved==='en' ? 'en' : 'ru');
+          if(!saved) applyProjectFilter('all');
         }catch(_){
           toggleLangBlocks('ru');
           applyProjectFilter('all');

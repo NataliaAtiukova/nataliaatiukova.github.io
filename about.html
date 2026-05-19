@@ -90,7 +90,7 @@
         });
         document.documentElement.setAttribute('lang',l); try{localStorage.setItem('lang',l)}catch(_){}}
       btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
-      (function(){try{const saved=localStorage.getItem('lang'); if(saved) setLang(saved);}catch(_){}})();
+      (function(){try{const saved=localStorage.getItem('lang'); setLang(saved==='en'?'en':'ru');}catch(_){setLang('ru');}})();
     </script>
     <script src="js/site-v2.js?v=20260519d"></script>
 </body>

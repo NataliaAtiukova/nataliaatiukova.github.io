@@ -29,8 +29,10 @@
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
     <style>html{scroll-behavior:smooth}</style>
-    <script>(function(){try{const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark');const L=localStorage.getItem('lang');if(L){document.documentElement.setAttribute('lang',L)}}catch(_){}})();</script>
+    <script>(function(){try{const L=localStorage.getItem('lang');if(L){document.documentElement.setAttribute('lang',L)}}catch(_){}})();</script>
+      <script data-site-theme-boot>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(_){}})();</script>
       <link rel="stylesheet" href="css/site-v2.css" />
+      
   </head>
   <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 antialiased site-v2">
     <div class="min-h-screen flex flex-col">
@@ -347,10 +349,6 @@
     <script>
       // Footer year
       const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
-      // Theme toggle
-      const themeBtn=document.getElementById('theme-toggle');
-      const updateIcons=()=>{const isDark=document.documentElement.classList.contains('dark');themeBtn?.setAttribute('aria-pressed',String(isDark));document.getElementById('icon-sun')?.classList.toggle('hidden',!isDark);document.getElementById('icon-moon')?.classList.toggle('hidden',isDark)};updateIcons();
-      themeBtn?.addEventListener('click',()=>{const root=document.documentElement;const makeDark=!root.classList.contains('dark');root.classList.toggle('dark',makeDark);try{localStorage.setItem('theme',makeDark?'dark':'light')}catch(_){}updateIcons();});
       // Language toggle
       const langBtns=document.querySelectorAll('.lang-btn');
       function setLang(l){
@@ -407,5 +405,6 @@
       burger?.addEventListener('click',()=>{const expanded=burger.getAttribute('aria-expanded')==='true';burger.setAttribute('aria-expanded',String(!expanded));mobile?.classList.toggle('hidden');});
     </script>
     <noscript><div style="position:fixed;inset:auto 0 0 0;background:#111827;color:#fff;padding:8px 16px;font:12px ui-sans-serif,system-ui">JavaScript отключён: тёмная тема и меню не активны.</div></noscript>
-  </body>
+    <script src="js/site-v2.js"></script>
+</body>
   </html>

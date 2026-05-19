@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact — Natalia Atiukova</title>
     <meta name="description" content="Contact page for Natalia Atiukova — mobile developer." />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light dark" />
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <style>html{scroll-behavior:smooth}</style>
     <script>(function(){try{const t=localStorage.getItem('lang'); if(t){document.documentElement.setAttribute('lang',t)}}catch(_){}})();</script>
+      <script data-site-theme-boot>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(_){}})();</script>
       <link rel="stylesheet" href="css/site-v2.css" />
+      
   </head>
   <body class="bg-white text-gray-800 antialiased site-v2">
     <header class="border-b border-gray-200 sticky top-0 bg-white/90 backdrop-blur z-30">
@@ -90,5 +92,6 @@
       btns.forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
       (function(){try{const saved=localStorage.getItem('lang'); if(saved) setLang(saved);}catch(_){}})();
     </script>
-  </body>
+    <script src="js/site-v2.js"></script>
+</body>
   </html>

@@ -9,9 +9,12 @@
       try { localStorage.setItem('lang', 'en'); } catch (_) {}
       window.location.replace('index.html');
     </script>
-    <link rel="stylesheet" href="css/site-v2.css" />
+    <script data-site-theme-boot>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(_){}})();</script>
+      <link rel="stylesheet" href="css/site-v2.css" />
+      
   </head>
   <body class="site-v2" style="display:grid;place-items:center;min-height:100vh;">
     <p>If you are not redirected automatically, open <a href="index.html">English portfolio page</a>.</p>
-  </body>
+    <script src="js/site-v2.js"></script>
+</body>
 </html>

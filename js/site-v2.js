@@ -175,6 +175,30 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  function initLangToggleStability() {
+    if (typeof window.setLang !== 'function') return;
+
+    const langButtons = document.querySelectorAll('button.lang-btn[data-lang]');
+    if (!langButtons.length) return;
+
+    langButtons.forEach(function (btn) {
+      if (btn.dataset.langBound === '1') return;
+      btn.dataset.langBound = '1';
+      btn.type = 'button';
+
+      btn.addEventListener(
+        'click',
+        function (event) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          const lang = btn.getAttribute('data-lang') === 'ru' ? 'ru' : 'en';
+          window.setLang(lang);
+        },
+        { capture: true }
+      );
+    });
+  }
+
   applyTheme(getPreferredTheme());
   ensureThemeToggle();
   initAmbientLayer();
@@ -182,4 +206,5 @@
   initRevealAnimations();
   initCardMotion();
   initHeaderShadow();
+  initLangToggleStability();
 })();

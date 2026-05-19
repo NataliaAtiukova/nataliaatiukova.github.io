@@ -9,6 +9,7 @@
     <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="16" fill="%231f2937"/><text x="50" y="58" font-size="52" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif">NA</text></svg>' />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>html{scroll-behavior:smooth}</style>
+    <script>(function(){try{const t=localStorage.getItem('lang'); if(t){document.documentElement.setAttribute('lang',t)}}catch(_){}})();</script>
       <script data-site-theme-boot>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(_){}})();</script>
       <link rel="stylesheet" href="css/site-v2.css?v=20260519e" />
       
@@ -17,11 +18,62 @@
     <header class="border-b border-gray-200 sticky top-0 bg-white/90 backdrop-blur z-30">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href="index.html" class="font-semibold text-gray-900">Natalia Atiukova</a>
+        <div class="flex items-center gap-2" role="group" aria-label="Language switcher">
+          <button data-lang="ru" class="lang-btn px-3 py-1.5 rounded-md text-sm border border-gray-300 text-gray-800 hover:bg-gray-50" aria-pressed="false">RU</button>
+          <button data-lang="en" class="lang-btn px-3 py-1.5 rounded-md text-sm border border-gray-300 text-gray-500 hover:bg-gray-50" aria-pressed="true">EN</button>
+        </div>
       </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <article class="space-y-6">
+      <article id="agreement-ru" class="space-y-6 hidden">
+        <header class="space-y-2">
+          <h1 class="text-3xl font-bold">Пользовательское соглашение</h1>
+          <p class="text-gray-600">(условия использования сайта nataliaatiukova.github.io)</p>
+        </header>
+
+        <section class="space-y-2">
+          <h2 class="text-xl font-semibold">1. Общие положения</h2>
+          <p>1.1. Настоящее Пользовательское соглашение (далее — «Соглашение») регулирует использование сайта <strong>nataliaatiukova.github.io</strong> (далее — «Сайт»).</p>
+          <p>1.2. Владельцем Сайта является <strong>Атюкова Наталья Владимировна</strong>.</p>
+          <p>1.3. Используя Сайт, пользователь подтверждает, что ознакомился и согласен с условиями Соглашения. Если пользователь не согласен, он обязан прекратить использование Сайта.</p>
+        </section>
+
+        <section class="space-y-2">
+          <h2 class="text-xl font-semibold">2. Назначение сайта</h2>
+          <p>2.1. Сайт является персональным портфолио разработчика и содержит информацию о проектах, услугах и контактах.</p>
+          <p>2.2. Сайт не является интернет-магазином, не принимает платежи и не осуществляет прямую продажу товаров или услуг.</p>
+        </section>
+
+        <section class="space-y-2">
+          <h2 class="text-xl font-semibold">3. Права и обязанности пользователя</h2>
+          <p>3.1. Пользователь обязуется использовать Сайт только в законных целях, не предпринимать действий, нарушающих работу Сайта, и не пытаться получить несанкционированный доступ.</p>
+          <p>3.2. Пользователь не вправе копировать, публиковать или распространять материалы Сайта без указания авторства и ссылки на источник.</p>
+          <p>3.3. При использовании форм связи пользователь обязан предоставлять достоверные данные и обеспечивать возможность обратной связи.</p>
+        </section>
+
+        <section class="space-y-2">
+          <h2 class="text-xl font-semibold">4. Ограничение ответственности</h2>
+          <p>4.1. Владелец Сайта не несет ответственности за точность, актуальность и полноту информации, размещенной на Сайте, а также за последствия ее использования.</p>
+          <p>4.2. Владелец Сайта не несет ответственности за сбои и перерывы в работе Сайта, вызванные техническими причинами, действиями третьих лиц или обстоятельствами непреодолимой силы.</p>
+          <p>4.3. Ссылки на сторонние ресурсы размещаются для удобства пользователя. Владелец Сайта не контролирует и не отвечает за их содержание.</p>
+        </section>
+
+        <section class="space-y-2">
+          <h2 class="text-xl font-semibold">5. Персональные данные</h2>
+          <p>5.1. Обработка персональных данных осуществляется в соответствии с <a href="privacy-policy.html" class="text-blue-600 hover:underline">Политикой конфиденциальности</a>, размещенной на Сайте.</p>
+          <p>5.2. Данные, передаваемые через формы обратной связи, передаются по защищенному соединению. Пользователь самостоятельно оценивает риски передачи данных в сети Интернет.</p>
+        </section>
+
+        <section class="space-y-2">
+          <h2 class="text-xl font-semibold">6. Заключительные положения</h2>
+          <p>6.1. Владелец Сайта вправе вносить изменения в настоящее Соглашение без предварительного уведомления. Новая редакция вступает в силу с момента публикации на Сайте.</p>
+          <p>6.2. Действующая редакция Соглашения размещена по адресу: <a href="https://nataliaatiukova.github.io/user-agreement.html" class="text-blue-600 hover:underline">https://nataliaatiukova.github.io/user-agreement.html</a>.</p>
+          <p>6.3. Дата последнего обновления: сентябрь 2025.</p>
+        </section>
+      </article>
+
+      <article id="agreement-en" class="space-y-6">
         <header class="space-y-2">
           <h1 class="text-3xl font-bold">User Agreement</h1>
           <p class="text-gray-600">(terms of use for nataliaatiukova.github.io)</p>
@@ -71,22 +123,29 @@
 <section class="py-12 bg-gray-50 dark:bg-gray-950/30 border-t border-gray-200/60 dark:border-gray-800">
   <div class="max-w-4xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="bg-white dark:bg-gray-900 border border-gray-200/80 dark:border-gray-800 rounded-3xl shadow-sm p-6 sm:p-8">
-      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Service Provider Information</h2>
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white lang-ru hidden">Информация о поставщике услуг</h2>
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white lang-en">Service Provider Information</h2>
       <dl class="mt-6 space-y-3 text-gray-700 dark:text-gray-200">
         <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
-          <dt class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Full Name</dt>
-          <dd class="text-base font-medium">Natalia Atiukova</dd>
+          <dt class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400 lang-ru hidden">ФИО</dt>
+          <dt class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400 lang-en">Full Name</dt>
+          <dd class="text-base font-medium lang-ru hidden">Атюкова Наталья Владимировна</dd>
+          <dd class="text-base font-medium lang-en">Natalia Atiukova</dd>
         </div>
         <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
-          <dt class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Tax ID (INN)</dt>
+          <dt class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400 lang-ru hidden">ИНН</dt>
+          <dt class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400 lang-en">Tax ID (INN)</dt>
           <dd class="text-base font-medium">643404462600</dd>
         </div>
         <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
-          <dt class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Status</dt>
-          <dd class="text-base font-medium">Self-employed (Professional Income Tax)</dd>
+          <dt class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400 lang-ru hidden">Статус</dt>
+          <dt class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400 lang-en">Status</dt>
+          <dd class="text-base font-medium lang-ru hidden">самозанятая (Налог на профессиональный доход)</dd>
+          <dd class="text-base font-medium lang-en">Self-employed (Professional Income Tax)</dd>
         </div>
       </dl>
-      <p class="mt-6 text-sm text-gray-500 dark:text-gray-400">Data is published in accordance with Russian Government Decree No. 2463 on distance sales.</p>
+      <p class="mt-6 text-sm text-gray-500 dark:text-gray-400 lang-ru hidden">Данные опубликованы в соответствии с Постановлением Правительства РФ № 2463 о дистанционной торговле.</p>
+      <p class="mt-6 text-sm text-gray-500 dark:text-gray-400 lang-en">Data is published in accordance with Russian Government Decree No. 2463 on distance sales.</p>
     </div>
   </div>
 </section>
@@ -95,9 +154,9 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row gap-2 sm:gap-4 sm:items-center justify-between text-sm text-gray-600">
         <p>© <span id="year"></span> Natalia Atiukova</p>
         <nav class="flex items-center gap-4">
-          <a href="index.html" class="hover:text-gray-900">Home</a>
-          <a href="oferta.html" class="hover:text-gray-900">Public Offer</a>
-          <a href="privacy-policy.html" class="hover:text-gray-900">Privacy Policy</a>
+          <a href="index.html" class="hover:text-gray-900"><span class="lang-ru hidden">Главная</span><span class="lang-en">Home</span></a>
+          <a href="oferta.html" class="hover:text-gray-900"><span class="lang-ru hidden">Публичная оферта</span><span class="lang-en">Public Offer</span></a>
+          <a href="privacy-policy.html" class="hover:text-gray-900"><span class="lang-ru hidden">Политика конфиденциальности</span><span class="lang-en">Privacy Policy</span></a>
         </nav>
       </div>
     </footer>
@@ -107,6 +166,22 @@
       if(yearEl){
         yearEl.textContent = new Date().getFullYear();
       }
+      const btns=document.querySelectorAll('.lang-btn');
+      const ru=document.getElementById('agreement-ru');
+      const en=document.getElementById('agreement-en');
+      function setLang(l){
+        const lang=l==='ru'?'ru':'en';
+        if(lang==='ru'){ru?.classList.remove('hidden'); en?.classList.add('hidden');}
+        else {en?.classList.remove('hidden'); ru?.classList.add('hidden');}
+        document.querySelectorAll('.lang-ru').forEach(el=>el.classList.toggle('hidden',lang!=='ru'));
+        document.querySelectorAll('.lang-en').forEach(el=>el.classList.toggle('hidden',lang!=='en'));
+        btns.forEach(b=>{const active=b.getAttribute('data-lang')===lang; b.setAttribute('aria-pressed',String(active)); b.classList.toggle('text-gray-800',active); b.classList.toggle('text-gray-500',!active);});
+        document.documentElement.setAttribute('lang',lang);
+        try{localStorage.setItem('lang',lang);}catch(_){}
+      }
+      document.querySelectorAll('.lang-btn[data-lang="ru"]').forEach(b=>b.addEventListener('click',()=>setLang('ru')));
+      document.querySelectorAll('.lang-btn[data-lang="en"]').forEach(b=>b.addEventListener('click',()=>setLang('en')));
+      (function(){try{const saved=localStorage.getItem('lang'); setLang(saved==='en'?'en':'ru');}catch(_){setLang('ru');}})();
     </script>
     <script src="js/site-v2.js?v=20260519e"></script>
 </body>

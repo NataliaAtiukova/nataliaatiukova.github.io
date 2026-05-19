@@ -47,15 +47,15 @@
     }
 
     function openFor(target){
-      // Build gallery within closest article (fallback to #projects)
-      const scope = target.closest('article') || target.closest('#projects') || document;
+      // Prefer explicit gallery scope per card, then fallback.
+      const scope = target.closest('[data-gallery]') || target.closest('article') || target.closest('#projects') || document;
       const candidates = Array.from(scope.querySelectorAll('img'))
-        .filter(img=> img.width >= 200 || img.classList.contains('object-cover'));
+        .filter(img=> (img.currentSrc || img.src) && img !== imgEl);
       gallery = candidates.map(img=>({
         el: img,
         src: img.currentSrc || img.src,
         alt: img.getAttribute('alt')||'',
-        caption: (img.closest('figure')?.querySelector('figcaption')?.textContent||'').trim()
+        caption: ((img.closest('figure')?.querySelector('figcaption')?.textContent||'').trim()) || (img.getAttribute('alt')||'')
       }));
       currentIndex = Math.max(0, candidates.indexOf(target));
       overlay.classList.remove('hidden');

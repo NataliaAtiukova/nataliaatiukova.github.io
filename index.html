@@ -31,7 +31,7 @@
     <style>html{scroll-behavior:smooth}</style>
     <script>(function(){try{const L=localStorage.getItem('lang');if(L){document.documentElement.setAttribute('lang',L)}}catch(_){}})();</script>
       <script data-site-theme-boot>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(_){}})();</script>
-      <link rel="stylesheet" href="css/site-v2.css" />
+      <link rel="stylesheet" href="css/site-v2.css?v=20260519d" />
       
   </head>
   <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 antialiased site-v2">
@@ -442,6 +442,6 @@
       burger?.addEventListener('click',()=>{const expanded=burger.getAttribute('aria-expanded')==='true';burger.setAttribute('aria-expanded',String(!expanded));mobile?.classList.toggle('hidden');});
     </script>
     <noscript><div style="position:fixed;inset:auto 0 0 0;background:#111827;color:#fff;padding:8px 16px;font:12px ui-sans-serif,system-ui">JavaScript отключён: тёмная тема и меню не активны.</div></noscript>
-    <script src="js/site-v2.js"></script>
+    <script src="js/site-v2.js?v=20260519d"></script>
 </body>
   </html>

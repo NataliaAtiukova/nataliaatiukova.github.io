@@ -728,7 +728,7 @@ body.site-v2 .app-showcase__cta {
   color: #ffffff !important;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.26);
-  background: linear-gradient(135deg, var(--ui-accent), #2f81f7, var(--ui-accent-2));
+  background: linear-gradient(135deg, var(--ui-accent), #14b8a6, var(--ui-accent-2));
   background-size: 180% 180%;
   box-shadow: 0 16px 34px rgba(15, 118, 110, 0.32);
 }
@@ -744,4 +744,13 @@ html.dark body.site-v2 .app-showcase__cta,
 body.site-v2[data-theme='dark'] .app-showcase__cta {
   border-color: rgba(226, 232, 240, 0.2);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+html:not(.dark) body.site-v2[data-theme='light'] {
+  color: var(--ui-ink);
+  background:
+    radial-gradient(1400px 680px at 15% -25%, rgba(15, 118, 110, 0.18), transparent 60%),
+    radial-gradient(1100px 600px at 95% -20%, rgba(234, 88, 12, 0.14), transparent 60%),
+    linear-gradient(180deg, #f9f5ec 0%, #f4efe6 58%, #f6f0e5 100%);
 }

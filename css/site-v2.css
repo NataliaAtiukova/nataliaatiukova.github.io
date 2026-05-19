@@ -733,6 +733,10 @@ body.site-v2 .app-showcase__cta {
   box-shadow: 0 16px 34px rgba(15, 118, 110, 0.32);
 }
 
+body.site-v2 .app-showcase__cta.hidden {
+  display: none !important;
+}
+
 body.site-v2 .app-showcase__cta:hover {
   color: #ffffff !important;
   transform: translateY(-2px);
